@@ -68,16 +68,14 @@ def wait(sec=35):
 st.write(curr_date)
 
 
-st.markdown("<h3><span style='color: blue;'>eIM + Offence Classifier + Summarizer + MORE</h3></span>", unsafe_allow_html=True)
+st.markdown("<h3><span style='color: blue;'>My AI Partner</h3></span>", unsafe_allow_html=True)
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
 
 sys_instructions = st.text_area("""Enter some instructions here""", value=instructions)
  
 spaces = "&nbsp;&nbsp;&nbsp;"
-new_data = st.text_area("""Enter a narrative or ask me any question about eIM and I will guide you through the naming process. 
-Although my training is limited, I am the proof of concept that AI can assist with multiple tasks at once.
-You can ask me specific questions. \nYou don't need to erase the text if I ask you follow up questions. Just keep adding the details required. 
+new_data = st.text_area("""Enter anything here. I will execute your request based on your instructions above.\nYou don't need to erase the text if I ask you follow up questions. Just keep adding the details required. 
 Example questions:\n
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***What naming conventions were you trained on?*** \n
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***What else can you do beside naming conventions?*** \n
