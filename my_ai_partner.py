@@ -121,7 +121,7 @@ new_data = st.text_area("""Enter your text or argument here.\n
 st.write("")
 st.write("Select a writing style")
 # create buttons in cols
-col1, col2, col3 = st.columns([1,1,1,1])
+col1, col2, col3, col4 = st.columns([1,1,1,1])
 
 result = None
 
