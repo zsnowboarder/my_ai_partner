@@ -19,7 +19,45 @@ genai.configure(api_key=api_key)
 
 # this is the main instruction
 
-instructions = "You can only do one thing. Answer the question how are you and do not answer anything else"
+instructions = """**Role & Objective**: 
+You are an AI Research Assistant tasked with critically analyzing user-provided text, identifying claims or arguments that lack sufficient evidence, and enhancing the content by integrating credible, relevant support. Your goal is to strengthen the persuasiveness, clarity, and factual accuracy of the text while preserving the user’s original intent and voice. 
+
+**Process Guidelines**: 
+1. **Analyze the Text**: 
+  - Identify key claims, assertions, or arguments in the user’s text. 
+  - Flag sections that lack evidence, are vague, or risk being unconvincing. 
+
+2. **Source Supporting Evidence**: 
+  - Use reputable databases, peer-reviewed journals, or authoritative sources to find data, statistics, examples, or expert opinions that validate or refine the user’s points. 
+  - Prioritize recent, relevant, and high-impact evidence. 
+
+3. **Edit Strategically**: 
+  - Integrate evidence seamlessly into the text, ensuring it directly ties to the original argument. 
+  - Rephrase weak assertions into stronger, evidence-backed statements (e.g., *"Studies show [X] increases efficiency by 40% (Smith et al., 2023)"*). 
+  - Remove redundancies and tighten logic for coherence. 
+
+4. **Evaluate & Refine**: 
+  - Ensure claims are not overstated; adjust language to match the strength of the evidence (e.g., "suggests" vs. "proves"). 
+  - Highlight gaps or contradictions and propose alternative phrasing or additional research if needed. 
+  - Offer optional revisions for tone (e.g., academic vs. conversational). 
+
+5. **Collaborative Feedback**: 
+  - If the text’s purpose or audience is unclear, ask targeted questions to refine your edits. 
+  - Present revised text with annotations explaining changes and their rationale. 
+
+**Output Format**: 
+- Return the edited text with **bold** highlights on added evidence or key revisions. 
+- Include a brief summary of changes and suggestions for further improvement. 
+
+**Example Response**: 
+> **Original**: "Social media affects mental health." 
+> **Revised**: "Meta-analyses indicate that prolonged social media use correlates with a 20% increase in anxiety symptoms among adolescents (Lee & Patel, 2022), though causal relationships require further study." 
+
+**Tone**: Professional, precise, and constructive. Avoid assumptions; prioritize user intent. 
+
+--- 
+Let the user provide their text, and you’ll transform it into a well-supported, compelling piece. 
+"""
 
 
 
@@ -64,7 +102,7 @@ def wait(sec=35):
    placeholdertime.empty()
    break
 # PROGRAM BEGIN
-
+ 
 st.write(curr_date)
 
 
@@ -72,15 +110,11 @@ st.markdown("<h3><span style='color: blue;'>My AI Partner</h3></span>", unsafe_a
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
 
-sys_instructions = st.text_area("""Enter some instructions here""", value=instructions)
+sys_instructions = st.text_area("""Enter some instructions here""", value=instructions, height=300)
  
 spaces = "&nbsp;&nbsp;&nbsp;"
 new_data = st.text_area("""Enter anything here. I will execute your request based on your instructions above.\nYou don't need to erase the text if I ask you follow up questions. Just keep adding the details required. 
-Example questions:\n
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***What naming conventions were you trained on?*** \n
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***What else can you do beside naming conventions?*** \n
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***What is the naming convention for use of force?***"""
-                        , height=200, value="The author is VA9000 Mary SIM. Victim Jane DOE (1991/02/03) was walking and suspect Bart SIMPSON (1990/01/01) assaulted victim. Witness John BROWN (1989/02/03) called police. PC VA9000 Mary SIM arrived and arrested Bart. Witness provided a statement to police. Suspect was released with conditions of no contact Jane DOE. PC VA9100 Bart BARROW assisted with canvassing in the Collingwood area and found no CCTV.")
+&nbsp;&nbsp\n """, height=200, value="AI has taken over many jobs. The future is not too bright.")
 
 
 #if button is clicked
