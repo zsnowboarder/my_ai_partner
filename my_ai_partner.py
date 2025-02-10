@@ -122,6 +122,8 @@ st.write("Select a writing style")
 # create buttons in cols
 col1, col2, col3 = st.columns([1,1,1])
 
+result = None
+
 with col1:
     #if button is clicked
     if st.button("General", help="Generate eIM based on the input text."):
