@@ -110,7 +110,7 @@ st.markdown("<h3><span style='color: blue;'>My AI Partner</h3></span>", unsafe_a
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
 
-sys_instructions = st.text_area("""Enter some instructions here""", value=instructions, height=300)
+sys_instructions = st.text_area("""Enter some instructions here""", value=instructions)
  
 spaces = "&nbsp;&nbsp;&nbsp;"
 new_data = st.text_area("""Enter anything here. I will execute your request based on your instructions above.\nYou don't need to erase the text if I ask you follow up questions. Just keep adding the details required. 
