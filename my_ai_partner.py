@@ -19,7 +19,7 @@ genai.configure(api_key=api_key)
 
 # this is the main instruction
 
-instructions = 'add system instructions here'
+instructions = 'You can only do one thing. Answer the question how are you and do not answer anything else"
 
 
 
@@ -72,7 +72,7 @@ st.markdown("<h3><span style='color: blue;'>eIM + Offence Classifier + Summarize
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
 
-sys_instructions = st.text_area("""Enter some instructions here""")
+sys_instructions = st.text_area("""Enter some instructions here""", value=instructions)
  
 spaces = "&nbsp;&nbsp;&nbsp;"
 new_data = st.text_area("""Enter a narrative or ask me any question about eIM and I will guide you through the naming process. 
