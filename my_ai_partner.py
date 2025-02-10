@@ -117,13 +117,14 @@ spaces = "&nbsp;&nbsp;&nbsp;"
 new_data = st.text_area("""Enter anything here. I will execute your request based on your instructions above.\nYou don't need to erase the text if I ask you follow up questions. Just keep adding the details required. 
 &nbsp;&nbsp\n """, height=200, value="AI has taken over many jobs. The future is not too bright.")
 
-
+st.write("")
+st.write("Select a writing style")
 # create buttons in cols
-col1, col2, col3 = st.columns([1,2,3])
+col1, col2, col3 = st.columns(3)
 
 with col1:
     #if button is clicked
-    if st.button("General Response", help="Generate eIM based on the input text."):
+    if st.button("General", help="Generate eIM based on the input text."):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate(sys_instructions, new_data)
@@ -131,8 +132,18 @@ with col1:
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         st.text_area("Response", result, height=800)
         wait(3)
-        
+
 with col2:
+    if st.button("Easy language", help="Generate eIM based on the input text."):
+        placeholder = st.empty()
+        placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
+        result = generate(sys_instructions + " You write in academic style.", new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        st.text_area("Response", result, height=800)
+        wait(3)
+        
+with col3:
     if st.button("Easy language", help="Generate eIM based on the input text."):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
