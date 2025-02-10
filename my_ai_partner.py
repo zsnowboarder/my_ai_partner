@@ -19,7 +19,7 @@ genai.configure(api_key=api_key)
 
 # this is the main instruction
 
-instructions = 'You can only do one thing. Answer the question how are you and do not answer anything else"
+instructions = "You can only do one thing. Answer the question how are you and do not answer anything else"
 
 
 
