@@ -130,7 +130,7 @@ with col1:
         result = generate(sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
-        st.text_area("Response", result, height=800)
+        #st.text_area("Response", result, height=800)
         wait(3)
 
 with col2:
@@ -140,7 +140,7 @@ with col2:
         result = generate(sys_instructions + " You write in academic style.", new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
-        st.text_area("Response", result, height=800)
+        #st.text_area("Response", result, height=800)
         wait(3)
         
 with col3:
@@ -150,6 +150,8 @@ with col3:
         result = generate(sys_instructions + " You write in easy english for a grade 10 student.", new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
-        st.text_area("Response", result, height=800)
+        #st.text_area("Response", result, height=800)
         wait(3)
+
+st.text_area("Response", result, height=800)
 
