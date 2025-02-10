@@ -134,7 +134,7 @@ with col1:
         wait(3)
 
 with col2:
-    if st.button("Easy language", help="Generate eIM based on the input text."):
+    if st.button("Academic", help="Generate eIM based on the input text."):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate(sys_instructions + " You write in academic style.", new_data)
