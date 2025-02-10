@@ -170,7 +170,7 @@ with col5:
     if st.button("Jimmy style :)", help="Generate response"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate("You write in a professional style. You present your argument in a strong logic that even lawyers can not argue further. " + sys_instructions, new_data)
+        result = generate("You write in a professional style. You present your argument in a funny sense with some sarcastic that even lawyers can not argue further. " + sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
