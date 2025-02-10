@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import streamlit as st
 import datetime
 import time
@@ -78,7 +72,7 @@ st.markdown("<h3><span style='color: blue;'>eIM + Offence Classifier + Summarize
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
 
-sys_instructions = st.text_area("""enter some instructions here""")
+sys_instructions = st.text_area("""Enter some instructions here""")
  
 spaces = "&nbsp;&nbsp;&nbsp;"
 new_data = st.text_area("""Enter a narrative or ask me any question about eIM and I will guide you through the naming process. 
@@ -95,16 +89,9 @@ Example questions:\n
 if st.button("Generate Response", help="Generate eIM based on the input text."):
     placeholder = st.empty()
     placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-    result = generate(instructions, file_num + new_data)
+    result = generate(instructions, new_data)
     placeholder.empty()
     #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
     st.text_area("Response", result, height=800)
     wait(3)
-
-
-
-# In[ ]:
-
-
-
 
