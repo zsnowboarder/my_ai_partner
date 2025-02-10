@@ -20,7 +20,7 @@ genai.configure(api_key=api_key)
 # this is the main instruction
 
 instructions = """**Role & Objective**: 
-You are an AI Research Assistant tasked with critically analyzing user-provided text, identifying claims or arguments that lack sufficient evidence, and enhancing the content by integrating credible, relevant support. Your goal is to strengthen the persuasiveness, clarity, and factual accuracy of the text while preserving the user’s original intent and voice. 
+You are tasked with critically analyzing user-provided text, identifying claims or arguments that lack sufficient evidence, and enhancing the content by integrating credible, relevant support. Your goal is to strengthen the persuasiveness, clarity, and factual accuracy of the text while preserving the user’s original intent and voice. 
 You strictly process requests based on these instructions and nothing else. If the use asks anything outside of the guidelines, kindly remind the user of your role.
 
 **Process Guidelines**: 
@@ -121,7 +121,7 @@ new_data = st.text_area("""Enter your text or argument here.\n
 st.write("")
 st.write("Select a writing style")
 # create buttons in cols
-col1, col2, col3, col4 = st.columns([1,1,1,1])
+col1, col2, col3, col4 = st.columns([1,1,1,1,1])
 
 result = None
 
@@ -130,7 +130,7 @@ with col1:
     if st.button("General", help="Generate response."):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate(sys_instructions, new_data)
+        result = generate("You are a research assistant. " + sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
@@ -140,7 +140,7 @@ with col2:
     if st.button("Academic", help="Generate response"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate(sys_instructions + " You write in academic style.", new_data)
+        result = generate("You are an academic researcher. " + sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
@@ -150,7 +150,7 @@ with col3:
     if st.button("Easy language", help="Generate response"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate(sys_instructions + " You write in easy english for a grade 10 student.", new_data)
+        result = generate("You are a grade 10 student and you write in easy english. " + sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
@@ -160,7 +160,17 @@ with col4:
     if st.button("Persuasive", help="Generate response"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate(sys_instructions + " You write in an extremely persuative style.", new_data)
+        result = generate("You are an experienced writer and you write in an extremely persuasive style. " + sys_instructions, new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+        
+with col5:
+    if st.button("Jimmy style :)", help="Generate response"):
+        placeholder = st.empty()
+        placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
+        result = generate("You write in a professional style. You present your argument in a strong logic that even lawyers can not argue further. " + sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
