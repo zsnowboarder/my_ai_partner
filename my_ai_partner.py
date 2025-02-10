@@ -157,7 +157,7 @@ with col3:
         wait(1)
 
 with col4:
-    if st.button("Persuative", help="Generate response"):
+    if st.button("Persuasive", help="Generate response"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate(sys_instructions + " You write in an extremely persuative style.", new_data)
