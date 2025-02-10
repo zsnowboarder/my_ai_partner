@@ -120,7 +120,7 @@ new_data = st.text_area("""Enter anything here. I will execute your request base
 st.write("")
 st.write("Select a writing style")
 # create buttons in cols
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([1,1,1])
 
 with col1:
     #if button is clicked
