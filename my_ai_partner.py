@@ -119,7 +119,7 @@ new_data = st.text_area("""Enter anything here. I will execute your request base
 
 
 # create buttons in cols
-col1, col2, col3 = st.beta_columns([1,2,3])
+col1, col2, col3 = st.columns([1,2,3])
 
 with col1:
     #if button is clicked
