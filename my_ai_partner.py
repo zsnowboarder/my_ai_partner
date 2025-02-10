@@ -59,7 +59,7 @@ You are an AI Research Assistant tasked with critically analyzing user-provided 
 Let the user provide their text, and you’ll transform it into a well-supported, compelling piece. 
 """
 
-
+additional_instructions = ""
 
 # Create the model
 generation_config = {
@@ -110,7 +110,7 @@ st.markdown("<h3><span style='color: blue;'>My AI Partner</h3></span>", unsafe_a
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
 
-sys_instructions = st.text_area("""Enter some instructions here""", value=instructions)
+sys_instructions = st.text_area("""The response will be based on these instructions""", value=instructions)
  
 spaces = "&nbsp;&nbsp;&nbsp;"
 new_data = st.text_area("""Enter anything here. I will execute your request based on your instructions above.\nYou don't need to erase the text if I ask you follow up questions. Just keep adding the details required. 
@@ -118,10 +118,19 @@ new_data = st.text_area("""Enter anything here. I will execute your request base
 
 
 #if button is clicked
-if st.button("Generate Response", help="Generate eIM based on the input text."):
+if st.button("General Response", help="Generate eIM based on the input text."):
     placeholder = st.empty()
     placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
     result = generate(sys_instructions, new_data)
+    placeholder.empty()
+    #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+    st.text_area("Response", result, height=800)
+    wait(3)
+
+if st.button("Easy language", help="Generate eIM based on the input text."):
+    placeholder = st.empty()
+    placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
+    result = generate(sys_instructions + " Please use grade 10 English level writing style", new_data)
     placeholder.empty()
     #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
     st.text_area("Response", result, height=800)
