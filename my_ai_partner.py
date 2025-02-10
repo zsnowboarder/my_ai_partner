@@ -130,7 +130,7 @@ if st.button("General Response", help="Generate eIM based on the input text."):
 if st.button("Easy language", help="Generate eIM based on the input text."):
     placeholder = st.empty()
     placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-    result = generate(sys_instructions + " Please use grade 10 English level writing style", new_data)
+    result = generate(sys_instructions + " Please revise the text using kincad scale 10.", new_data)
     placeholder.empty()
     #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
     st.text_area("Response", result, height=800)
