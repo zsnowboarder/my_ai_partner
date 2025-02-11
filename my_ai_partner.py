@@ -107,7 +107,7 @@ def wait(sec=35):
 st.write(curr_date)
 
 
-st.markdown("<h3><span style='color: blue;'>My AI Partner</h3></span>", unsafe_allow_html=True)
+st.markdown("<h3><span style='color: blue;'>My AI Writing Partner</h3></span>", unsafe_allow_html=True)
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
 
