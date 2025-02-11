@@ -124,7 +124,7 @@ st.write("Select a writing style")
 col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
 
 st.write("")
-st.write("Improve it with the following")
+st.write("Spice it up with the following")
 
 col6, col7, col8, col9, col10 = st.columns([1,1,1,1,1])
 
@@ -214,5 +214,17 @@ with col8:
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
         wait(1)
+
+with col9:
+    #if button is clicked
+    if st.button("Elegant", help="Generate response."):
+        placeholder = st.empty()
+        placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
+        result = generate("Improve the writing with an elegant tone, using sophisticated and clever words. Explain the result.", new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+        
 st.text_area("Response", result, height=800)
 
