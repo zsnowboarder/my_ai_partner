@@ -175,7 +175,7 @@ with col5:
     if st.button("Jimmy style :)", help="Generate response"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate("You write in a professional style with funny sense and some sarcastic comments that even lawyers can not argue further. " + sys_instructions, new_data)
+        result = generate("You are analytical with a sense of humor. Your arguments are the strongest and well structure. You write in APA format. " + sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
@@ -221,6 +221,17 @@ with col9:
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Improve the writing with an elegant tone, using sophisticated and clever words. Explain the result.", new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+
+with col10:
+    #if button is clicked
+    if st.button("Coherent", help="Generate response."):
+        placeholder = st.empty()
+        placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
+        result = generate("Improve the sentences in a well structured and coherent tone. ", new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
