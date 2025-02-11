@@ -204,7 +204,7 @@ with col7:
         
 with col8:
     #if button is clicked
-    if st.button("Professional", help="Generate response."):
+    if st.button("Poetic", help="Generate response."):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Improve the writing with a poetic tone. Explain the result.", new_data)
