@@ -122,6 +122,10 @@ st.write("")
 st.write("Select a writing style")
 # create buttons in cols
 col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
+
+st.write("")
+st.write("Improve it with the following")
+
 col6, col7, col8, col9, col10 = st.columns([1,1,1,1,1])
 
 result = None
@@ -177,8 +181,6 @@ with col5:
         #st.text_area("Response", result, height=800)
         wait(1)
 
-st.write("")
-st.write("Improve it with the following")
 
 with col6:
     #if button is clicked
