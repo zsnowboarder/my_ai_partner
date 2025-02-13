@@ -247,7 +247,7 @@ with col11:
     if st.button("Analyze Data", help="Generate response."):
         placeholder = st.empty()
         placeholder.write("Analyzing...")
-        result = generate("1. Critically analyse the data. 2. Identify trends and patterns. 3. Draw accurate and meaningful insights from the data. 4. Synthesize the findings with research or reliable sources. 5. Provide suggestions for further improvement. Here is the data: ", new_data)
+        result = generate("1. Critically analyse the data. 2. Identify trends and patterns. 3. Draw accurate and meaningful insights from the data. 4. Synthesize the findings with research or reliable sources in one paragraph. 5. Provide suggestions for further improvement. Here is the data: ", new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
