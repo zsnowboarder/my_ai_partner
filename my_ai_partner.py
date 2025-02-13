@@ -128,6 +128,11 @@ st.write("Spice it up with the following")
 
 col6, col7, col8, col9, col10 = st.columns([1,1,1,1,1])
 
+st.write("")
+st.write("Analysis")
+
+col11, co12, col13, col14, col15 = st.columns([1,1,1,1,1])
+
 result = None
 
 with col1:
@@ -236,6 +241,18 @@ with col10:
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
         wait(1)
+
+with col11:
+    #if button is clicked
+    if st.button("Analyze Data", help="Generate response."):
+        placeholder = st.empty()
+        placeholder.write("Analyzing...")
+        result = generate("1. Critically analyse the data. 2. Identify trends and patterns. 3. Draw accurate and meaningful insights from the data. 4. Synthesize the findings with research or reliable sources. 5. Provide suggestions for further improvement. Here is the data: ", new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
         
+    
 st.text_area("Response", result, height=800)
 
