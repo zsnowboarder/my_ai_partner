@@ -76,7 +76,7 @@ generation_config = {
 def generate(inst_text, prompt_text):
  model = genai.GenerativeModel(
   #model_name="gemini-1.5-pro",
-  model_name="gemini-flash-2.0",
+  model_name="gemini-2.0-flash",
   generation_config=generation_config,
   system_instruction=inst_text)
   
