@@ -296,7 +296,7 @@ inst_analysis2 = """You are an intelligent AI designed to analyze and determine 
    - Summarize the emotional analysis, tone assessment, pattern detection, and relevant research findings.
    - Offer any additional observations or insights based on the text analysis.
 """
-with col11:
+with col16:
     #if button is clicked
     if st.button("Sentiment", help="Analyze sentiment and emotions"):
         placeholder = st.empty()
@@ -326,7 +326,7 @@ Provide Feedback and Recommendations:
 Give the user feedback on the keyword combinations and the expected effectiveness.
 Suggest any additional steps or considerations to enhance the search and expert investigative techniques."""
         
-with col16:
+with col12:
     #if button is clicked
     if st.button("MO Search", help="Generate tips to identify MOs"):
         placeholder = st.empty()
