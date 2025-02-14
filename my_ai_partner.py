@@ -62,7 +62,7 @@ You strictly process requests based on these instructions and nothing else. If t
 Let the user provide their text, and you’ll transform it into a well-supported, compelling piece. 
 """
 
-inst_sent_change = "Identify the sentences you changed side by side when relevant. "
+inst_sent_change = "Identify the sentences you changed side by side when possible. "
 additional_instructions = ""
 
 # Create the model
