@@ -179,7 +179,7 @@ with col3:
     if st.button("Easy language", help="Generate response"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate("You are a grade 10 student and you write in easy English. " + inst_sent_change + sys_instructions, new_data)
+        result = generate("You are a grade 10 student and you write in easy English. " +  sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
@@ -189,7 +189,7 @@ with col4:
     if st.button("Persuasive", help="Generate response"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate("You are an experienced writer and you write in an extremely persuasive style. " + sys_instructions, new_data + " " + inst_sent_change)
+        result = generate("You are an experienced writer and you write in an extremely persuasive style. " + sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
