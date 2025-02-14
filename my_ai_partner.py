@@ -62,6 +62,7 @@ You strictly process requests based on these instructions and nothing else. If t
 Let the user provide their text, and you’ll transform it into a well-supported, compelling piece. 
 """
 
+inst_sent_change = "Identify the sentences you changed side by side when relevant. "
 additional_instructions = ""
 
 # Create the model
@@ -81,7 +82,7 @@ ai_models_dict = {"Gemini 2.0 Flash (Max 1500 requests per day)": "gemini-2.0-fl
 
 ai_models = list(ai_models_dict.keys())
 
-def generate(inst_text, prompt_text):
+def generate(inst_text + inst_sent_change, prompt_text):
  model = genai.GenerativeModel(
   #model_name="gemini-1.5-pro",
   model_name=selected_model,
