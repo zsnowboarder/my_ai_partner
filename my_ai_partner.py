@@ -295,7 +295,7 @@ inst_analysis2 = """You are an intelligent AI designed to analyze and determine 
 6. **Provide Insights and Summary:**
    - Summarize the emotional analysis, tone assessment, pattern detection, and relevant research findings.
    - Offer any additional observations or insights based on the text analysis.
-   - Include estimated scores of emotional, tones and others
+   - Include estimated scores of emotional, tone, actionable, research-oriented or any relevant measures.
 """
 with col12:
     #if button is clicked
