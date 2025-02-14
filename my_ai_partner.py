@@ -144,7 +144,7 @@ col6, col7, col8, col9, col10 = st.columns([1,1,1,1,1])
 st.write("")
 st.write("Analyse the text")
 
-col11, co12, col13, col14, col15 = st.columns([1,1,1,1,1])
+col11, col12, col13, col14, col15 = st.columns([1,1,1,1,1])
 
 st.write("")
 st.write("Invest assist with free text search")
