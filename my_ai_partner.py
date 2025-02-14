@@ -122,7 +122,7 @@ st.write('**Responses are generated using the Google Gemini AI API. This is the 
 sys_instructions = instructions
 
 st.write("")
-selected_option = st.selectbox("Select a model:", ai_odels)
+selected_option = st.selectbox("Select a model:", ai_models)
 selected_model = ai_models_dict[selected_option]
 st.write("")
 #spaces = "&nbsp;&nbsp;&nbsp;"
