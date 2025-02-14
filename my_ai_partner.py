@@ -74,10 +74,12 @@ generation_config = {
 
 # FUNCTIONS
 
+ai_models = ["gemini-1.5-pro", "gemini-2.0-flash"]
+
 def generate(inst_text, prompt_text):
  model = genai.GenerativeModel(
   #model_name="gemini-1.5-pro",
-  model_name="gemini-2.0-flash",
+  model_name=selected_model,
   generation_config=generation_config,
   system_instruction=inst_text)
   
@@ -115,10 +117,13 @@ st.write('**Responses are generated using the Google Gemini AI API. This is the 
 
 #sys_instructions = st.text_area("""The response will be based on these instructions""", value=instructions)
 sys_instructions = instructions
- 
-spaces = "&nbsp;&nbsp;&nbsp;"
-new_data = st.text_area("""Enter your text or argument here.\n
-&nbsp;&nbsp\n """, height=200, value="AI has taken over many jobs. The future is not too bright.")
+
+st.write("")
+selected_model = st.selectbox("Select a model:", ai_models)
+st.write("")
+#spaces = "&nbsp;&nbsp;&nbsp;"
+new_data = st.text_area("""Enter your text or argument here.\n""", 
+                        height=200, value="AI has taken over many jobs. The future is not too bright.")
 
 st.write("")
 st.write("Select a writing style")
