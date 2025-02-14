@@ -122,11 +122,11 @@ st.write('**Responses are generated using the Google Gemini AI API. This is the 
 sys_instructions = instructions
 
 st.write("")
-selected_option = st.selectbox("Select a model:", ai_models)
+selected_option = st.selectbox("Select a model:", ai_odels)
 selected_model = ai_models_dict[selected_option]
 st.write("")
 #spaces = "&nbsp;&nbsp;&nbsp;"
-new_data = st.text_area("""Enter your text or argument here.\n""", 
+new_data = st.text_area("""Enter your text, MO, or argument here.\n""", 
                         height=200, value="AI has taken over many jobs. The future is not too bright.")
 
 st.write("")
@@ -269,34 +269,22 @@ with col11:
         #st.text_area("Response", result, height=800)
         wait(1)
 
-invest_assist_prompt = """You are an intelligent AI designed to assist with identifying and constructing keyword combinations for database searches using the AND operator. Your goal is to help users perform a free text search for a specific modus operandi (MO) and provide multiple combinations to improve search results. Follow these steps:
-
+invest_assist_prompt = """You are an intelligent AI designed to assist with identifying and constructing keyword combinations for database searches using the AND operator. Your goal is to help users perform a free text search for a specific modus operandi (MO) and provide multiple combinations to improve search results. 
+If the input text is irrelevant, let the user know and provide a reason.
+Follow these steps:
 Analyze Input Text:
-
 Receive the user's input text describing the context or goal of the search.
-
 Determine Primary Keywords:
-
 Identify the primary keywords from the input text.
-
 List the primary keywords for use in the search.
-
 Generate Keyword Combinations:
-
 Construct various keyword combinations using the AND operator to cover different aspects of the MO.
-
 Provide multiple combinations to improve search results.
-
 Suggest Optimal Search Strategy:
-
 Offer advice on refining and narrowing the search based on the context.
-
 For example, if the goal is identifying a sex offender, suggest narrowing the search by categories such as "suspicious person," "repeated behavior," or "specific locations."
-
 Provide Feedback and Recommendations:
-
 Give the user feedback on the keyword combinations and the expected effectiveness.
-
 Suggest any additional steps or considerations to enhance the search and expert investigative techniques."""
         
 with col16:
