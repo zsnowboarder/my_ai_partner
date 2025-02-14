@@ -144,6 +144,11 @@ st.write("Analysis")
 
 col11, co12, col13, col14, col15 = st.columns([1,1,1,1,1])
 
+st.write("")
+st.write("Invest assist with free text search")
+
+col16, co17, col18, col19, col20 = st.columns([1,1,1,1,1])
+
 result = None
 
 with col1:
@@ -263,7 +268,47 @@ with col11:
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
         wait(1)
+
+invest_assist_prompt = """You are an intelligent AI designed to assist with identifying and constructing keyword combinations for database searches using the AND operator. Your goal is to help users perform a free text search for a specific modus operandi (MO) and provide multiple combinations to improve search results. Follow these steps:
+
+Analyze Input Text:
+
+Receive the user's input text describing the context or goal of the search.
+
+Determine Primary Keywords:
+
+Identify the primary keywords from the input text.
+
+List the primary keywords for use in the search.
+
+Generate Keyword Combinations:
+
+Construct various keyword combinations using the AND operator to cover different aspects of the MO.
+
+Provide multiple combinations to improve search results.
+
+Suggest Optimal Search Strategy:
+
+Offer advice on refining and narrowing the search based on the context.
+
+For example, if the goal is identifying a sex offender, suggest narrowing the search by categories such as "suspicious person," "repeated behavior," or "specific locations."
+
+Provide Feedback and Recommendations:
+
+Give the user feedback on the keyword combinations and the expected effectiveness.
+
+Suggest any additional steps or considerations to enhance the search and expert investigative techniques."""
         
-    
+with col16:
+    #if button is clicked
+    if st.button("MO Search", help="Generate tips to identify MOs"):
+        placeholder = st.empty()
+        placeholder.write("I am thinking...")
+        result = generate(invest_assist_prompt, new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+
 st.text_area("Response", result, height=800)
 
