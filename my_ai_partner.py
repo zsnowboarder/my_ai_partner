@@ -122,7 +122,8 @@ st.write('**Responses are generated using the Google Gemini AI API. This is the 
 sys_instructions = instructions
 
 st.write("")
-selected_model = st.selectbox("Select a model:", ai_models)
+selected_option = st.selectbox("Select a model:", ai_models)
+selected_model = ai_models_dict[selected_option]
 st.write("")
 #spaces = "&nbsp;&nbsp;&nbsp;"
 new_data = st.text_area("""Enter your text or argument here.\n""", 
