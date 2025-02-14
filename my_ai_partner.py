@@ -74,7 +74,10 @@ generation_config = {
 
 # FUNCTIONS
 
-ai_models = ["gemini-1.5-pro", "gemini-2.0-flash"]
+ai_models_dict = {"Gemini 1.5 Pro (Max 50 requests per day)": "gemini-1.5-pro",
+                  "Gemini 2.0 Flash (Max 1500 requests per day)": "gemini-2.0-flash"}
+
+ai_models = list(ai_models_dict.keys())
 
 def generate(inst_text, prompt_text):
  model = genai.GenerativeModel(
