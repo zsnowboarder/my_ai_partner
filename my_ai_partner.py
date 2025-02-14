@@ -130,17 +130,17 @@ new_data = st.text_area("""Enter your text, MO, or argument here.\n""",
                         height=200, value="AI has taken over many jobs. The future is not too bright.")
 
 st.write("")
-st.write("Select a writing style")
+st.write("Transform the writing style")
 # create buttons in cols
 col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
 
 st.write("")
-st.write("Spice it up with the following")
+st.write("Spice up the writing")
 
 col6, col7, col8, col9, col10 = st.columns([1,1,1,1,1])
 
 st.write("")
-st.write("Analysis")
+st.write("Analyse the text")
 
 col11, co12, col13, col14, col15 = st.columns([1,1,1,1,1])
 
@@ -269,7 +269,7 @@ with col11:
         #st.text_area("Response", result, height=800)
         wait(1)
 
-invest_assist_prompt = """You are an intelligent AI designed to assist with identifying and constructing keyword combinations for database searches using the AND operator. Your goal is to help users perform a free text search for a specific modus operandi (MO) and provide multiple combinations to improve search results. 
+invest_assist_prompt = """You are an intelligent AI designed to assist with identifying and constructing keyword combinations for database searches using the AND operator. Your goal is to help users perform a free text search for similar modus operandi (MO) in the database and provide multiple combinations to improve search results. 
 If the input text is irrelevant, let the user know and provide a reason.
 Follow these steps:
 Analyze Input Text:
