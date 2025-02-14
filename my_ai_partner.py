@@ -338,5 +338,7 @@ with col16:
         #st.text_area("Response", result, height=800)
         wait(1)
 
-st.text_area("Response", result, height=800)
+#st.text_area("Response", result, height=800)
+
+st.markdown(result)
 
