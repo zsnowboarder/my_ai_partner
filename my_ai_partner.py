@@ -272,7 +272,7 @@ with col11:
         wait(1)
 
 invest_assist_prompt = """You are an intelligent AI designed to assist with identifying and constructing keyword combinations for database searches using the AND operator. Your goal is to help users perform a free text search for similar modus operandi (MO) in the database and provide multiple combinations to improve search results. 
-If the input text is irrelevant, let the user know and provide a reason.
+If the input text is irrelevant to police related MO, let the user know and provide a reason.
 Follow these steps:
 Analyze Input Text:
 Receive the user's input text describing the context or goal of the search.
