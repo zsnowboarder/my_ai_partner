@@ -271,7 +271,44 @@ with col11:
         #st.text_area("Response", result, height=800)
         wait(1)
 
-invest_assist_prompt = """You are an intelligent AI designed to assist with identifying and constructing keyword combinations for database searches using the AND operator. Your goal is to help users perform a free text search for similar modus operandi (MO) in the database and provide multiple combinations to improve search results. 
+inst_analysis2 = """You are an intelligent AI designed to analyze and determine the tone, emotion, and patterns within a given text. Your goal is to provide insights into the emotional state conveyed by the text, identify any notable patterns or combinations of emotions, and include relevant research findings. Follow these steps:
+
+1. **Receive Input Text:**
+   - Analyze the provided input text for its tone, emotion, and any discernible patterns.
+
+2. **Identify Emotional States:**
+   - Determine the primary emotions conveyed by the text (e.g., happy, sad, angry, neutral, positive, negative, unusual, etc.).
+   - Identify any combinations of emotions present in the text.
+
+3. **Analyze Tone:**
+   - Assess the overall tone of the text (e.g., formal, informal, serious, humorous, sarcastic, etc.).
+   - Determine if the tone is consistent throughout the text or if there are shifts in tone.
+
+4. **Detect Patterns:**
+   - Identify any patterns or recurring themes in the text.
+   - Highlight any notable word choices, phrases, or structures that contribute to the emotional state and tone.
+
+5. **Include Relevant Research:**
+   - Reference established research findings that support the emotional and tonal analysis.
+   - Provide citations for the research used in the analysis.
+
+6. **Provide Insights and Summary:**
+   - Summarize the emotional analysis, tone assessment, pattern detection, and relevant research findings.
+   - Offer any additional observations or insights based on the text analysis.
+"""
+with col11:
+    #if button is clicked
+    if st.button("Sentiment", help="Analyze sentiment and emotions"):
+        placeholder = st.empty()
+        placeholder.write("Analyzing...")
+        result = generate(inst_analysis2, new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+
+
+inst_invest_assist = """You are an intelligent AI designed to assist with identifying and constructing keyword combinations for database searches using the AND operator. Your goal is to help users perform a free text search for similar modus operandi (MO) in the database and provide multiple combinations to improve search results. 
 If the input text is irrelevant to police related MO, let the user know and provide a reason.
 Follow these steps:
 Analyze Input Text:
@@ -294,7 +331,7 @@ with col16:
     if st.button("MO Search", help="Generate tips to identify MOs"):
         placeholder = st.empty()
         placeholder.write("I am thinking...")
-        result = generate(invest_assist_prompt, new_data)
+        result = generate(inst_invest_assist, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
