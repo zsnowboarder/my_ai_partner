@@ -74,8 +74,9 @@ generation_config = {
 
 # FUNCTIONS
 
-ai_models_dict = {"Gemini 1.5 Pro (Max 50 requests per day)": "gemini-1.5-pro",
-                  "Gemini 2.0 Flash (Max 1500 requests per day)": "gemini-2.0-flash"}
+ai_models_dict = {"Gemini 2.0 Flash (Max 1500 requests per day)": "gemini-2.0-flash",
+                  "Gemini 1.5 Pro (Max 50 requests per day)": "gemini-1.5-pro"
+                  }
 
 ai_models = list(ai_models_dict.keys())
 
