@@ -82,7 +82,7 @@ ai_models_dict = {"Gemini 2.0 Flash (Max 1500 requests per day)": "gemini-2.0-fl
 
 ai_models = list(ai_models_dict.keys())
 
-def generate(inst_text + inst_sent_change, prompt_text):
+def generate(inst_text, prompt_text):
  model = genai.GenerativeModel(
   #model_name="gemini-1.5-pro",
   model_name=selected_model,
@@ -179,7 +179,7 @@ with col3:
     if st.button("Easy language", help="Generate response"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate("You are a grade 10 student and you write in easy english. " + sys_instructions, new_data)
+        result = generate("You are a grade 10 student and you write in easy English. " + inst_sent_change + sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
@@ -189,7 +189,7 @@ with col4:
     if st.button("Persuasive", help="Generate response"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate("You are an experienced writer and you write in an extremely persuasive style. " + sys_instructions, new_data)
+        result = generate("You are an experienced writer and you write in an extremely persuasive style. " + inst_sent_change + sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
@@ -255,7 +255,7 @@ with col10:
     if st.button("Coherent", help="Generate response."):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate("Improve the sentences in a well structured and coherent tone. ", new_data)
+        result = generate("Improve the sentences in a well structured and coherent tone. " + inst_sent_change, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
