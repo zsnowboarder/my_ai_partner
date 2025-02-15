@@ -137,7 +137,8 @@ Generate Greeting:
 Combine the time-based greeting with the holiday greeting (if applicable).
 Ensure the greeting is friendly, warm, and includes a sense of humor when appropriate.
 Provide the Greeting:
-Return only the final greeting and indicate that you are happy to assist with writing and analysis."""
+Return only the final greeting and indicate that you are happy to assist with writing and analysis.
+Synthesize the greeting with current events and make it funny. Acknowlege that you are AI and include a disclaimer."""
     
     greeting = generate(greeting_inst, "Hello")
     st.session_state.greeting = greeting
