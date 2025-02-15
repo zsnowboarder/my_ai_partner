@@ -65,6 +65,9 @@ Let the user provide their text, and you’ll transform it into a well-supported
 inst_sent_change = "Identify the sentences you changed side by side when possible. "
 additional_instructions = ""
 
+# select the init model
+selected_model = "gemini-2.0-flash"
+
 # Create the model
 generation_config = {
   "temperature": 1,
