@@ -118,10 +118,9 @@ def wait(sec=35):
 #s session state variable
 if "first_run" not in st.session_state:
     st.session_state.first_run = 1
+    greetings = generate("You role is to greet customers. You have a sense of humor and you are willing to assist. ", "Generate an appropriate greeting. Include holiday greetings when appropriate. ")
 
-st.write(st.session_state.first_run)
-st.session_state.first_run += 1
-
+st.write(greetings)
 st.markdown("<h3><span style='color: blue;'>My AI Writing Partner</h3></span>", unsafe_allow_html=True)
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
