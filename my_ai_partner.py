@@ -120,7 +120,7 @@ def wait(sec=35):
 
 #s session state variable
 if "first_run" not in st.session_state:
-    global greetings
+    global greeting
     st.session_state.first_run = 1
     greeting_inst = "The current date and time is " + now.strftime("%Y-%m-%d %H:%M:%S") + """ You are an intelligent AI designed to greet users based on the time of day and to include appropriate holiday greetings when a public holiday is near. Follow these steps:
 Determine Time of Day:
@@ -138,9 +138,11 @@ Combine the time-based greeting with the holiday greeting (if applicable).
 Ensure the greeting is friendly, warm, and includes a sense of humor when appropriate.
 Provide the Greeting:
 Return only the final greeting and indicate that you are happy to assist with writing and analysis."""
-    greetings = generate(greeting_inst, "Hello")
     
-st.write(greetings)
+    greeting = generate(greeting_inst, "Hello")
+    st.session_state.greeting = greeting
+    
+st.write(st.session_state.greeting)
 st.markdown("<h3><span style='color: blue;'>My AI Writing Partner</h3></span>", unsafe_allow_html=True)
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
