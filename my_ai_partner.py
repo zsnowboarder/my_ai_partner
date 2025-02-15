@@ -137,14 +137,14 @@ Generate Greeting:
 Combine the time-based greeting with the holiday greeting (if applicable).
 Ensure the greeting is friendly, warm, and includes a sense of humor when appropriate.
 Provide the Greeting:
-Return only the final greeting and indicate that you are happy to assist with writing and analysis.
-Synthesize the greeting with current events and make it funny. Acknowlege that you are AI and include a disclaimer."""
+Return only the final greeting and indicate you are happy to assist with writing and analysis.
+Synthesize the greeting with current events and make it extremely funny. Acknowledge that you are AI and include a disclaimer."""
     
     greeting = generate(greeting_inst, "Hello")
     st.session_state.greeting = greeting
     
 st.write(st.session_state.greeting)
-st.markdown("<h3><span style='color: blue;'>My AI Writing Partner</h3></span>", unsafe_allow_html=True)
+st.markdown("<h3><span style='color: blue;'>My AI Companion</h3></span>", unsafe_allow_html=True)
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
 
