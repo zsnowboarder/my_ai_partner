@@ -122,7 +122,22 @@ def wait(sec=35):
 if "first_run" not in st.session_state:
     global greetings
     st.session_state.first_run = 1
-    greetings = generate("Your role is to greet customers. You have a sense of humor and you are willing to assist. ", "Generate an appropriate greeting. If it is around a public holiday, greet the user with a holiday message. ")
+    greeting_prompt = """You are an intelligent AI designed to greet users based on the time of day and to include appropriate holiday greetings when a public holiday is near. Follow these steps:
+Determine Time of Day:
+Analyze the current time of day to decide the greeting.
+Morning (5:00 AM - 11:59 AM): "Good morning"
+Afternoon (12:00 PM - 5:59 PM): "Good afternoon"
+Evening (6:00 PM - 9:59 PM): "Good evening"
+Night (10:00 PM - 4:59 AM): "Good night"
+Check for Public Holidays:
+Identify if today or an upcoming day is a public holiday.
+If a public holiday is near, include an appropriate holiday greeting.
+Generate Greeting:
+Combine the time-based greeting with the holiday greeting (if applicable).
+Ensure the greeting is friendly, warm, and includes a sense of humor when appropriate.
+Provide the Greeting:
+Output the final greeting to the user."""
+    greetings = generate("You have a sense of humor and you are willing to assist with writing and anaysis. ", greeting_prompt)
     
 st.write(greetings)
 st.markdown("<h3><span style='color: blue;'>My AI Writing Partner</h3></span>", unsafe_allow_html=True)
