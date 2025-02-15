@@ -75,7 +75,7 @@ Provide your response in a structured format as follows:
 3. **Severity Assessment (if Yes):** If you identified potential mental health concerns, provide a severity rating on a scale of 0 to 100, where 0 represents no discernible mental health concerns and 100 represents severe impairment. Justify your rating by explaining the factors you considered. For example, "Severity: 75. This rating is based on the presence of multiple concerning indicators, including self-harm ideation and a significant disruption to daily functioning as described in the text.  The severity is elevated due to the presence of self-harm ideation, which indicates a higher risk."
 
 4. **Recommended Course of Action (if Yes):** If you identified potential mental health concerns, suggest appropriate courses of action for police and health colaborative programs in British Columbia Canada. This could include:
-    * **Seeking professional help:** "The individual should be encouraged to seek evaluation and treatment from a qualified mental health professional, such as a therapist, psychologist, or psychiatrist."
+    * **Seeking professional help:** "The individual should be encouraged to seek evaluation and treatment from a qualified mental health professional, such as a therapist, psychologist, or psychiatrist. Provide an appropriate referral to either Car 87, AOT, ACT, or other mental health teams in BC Canada."
     * **Self-help strategies:** "While professional help is recommended, the individual may also benefit from self-help strategies such as mindfulness exercises, journaling, and connecting with supportive individuals."
     * **Crisis resources:** "If there is immediate danger to self or others, the individual should be directed to contact emergency services (e.g., 911) or a crisis hotline immediately." Provide specific hotline numbers if possible (e.g., "In the US, the 988 Suicide & Crisis Lifeline can be reached by dialing 988").
     * **Other recommendations:** Tailor recommendations to the specific concerns identified.  **Explain the rationale behind each recommendation.**
@@ -195,7 +195,7 @@ st.write("Analyse the text")
 col11, col12, col13, col14, col15 = st.columns([1,1,1,1,1])
 
 st.write("")
-st.write("Invest assist with free text search")
+st.write("Invest assist")
 
 col16, col17, col18, col19, col20 = st.columns([1,1,1,1,1])
 
@@ -377,7 +377,7 @@ Suggest any additional steps or considerations to enhance the search and expert 
         
 with col16:
     #if button is clicked
-    if st.button("MO Search", help="Generate tips to identify MOs and suspects"):
+    if st.button("MO Search", help="Generate tips to identify MOs and suspects for free text search"):
         placeholder = st.empty()
         placeholder.write("I am thinking...")
         result = generate(inst_invest_assist, new_data)
