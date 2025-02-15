@@ -122,7 +122,7 @@ def wait(sec=35):
 if "first_run" not in st.session_state:
     global greetings
     st.session_state.first_run = 1
-    greeting_prompt = "The current date and time is " + now.strftime("%Y-%m-%d %H:%M:%S") + """ You are an intelligent AI designed to greet users based on the time of day and to include appropriate holiday greetings when a public holiday is near. Follow these steps:
+    greeting_inst = "The current date and time is " + now.strftime("%Y-%m-%d %H:%M:%S") + """ You are an intelligent AI designed to greet users based on the time of day and to include appropriate holiday greetings when a public holiday is near. Follow these steps:
 Determine Time of Day:
 Analyze the current time of day to decide the greeting.
 Morning (5:00 AM - 11:59 AM): "Good morning"
@@ -138,7 +138,7 @@ Combine the time-based greeting with the holiday greeting (if applicable).
 Ensure the greeting is friendly, warm, and includes a sense of humor when appropriate.
 Provide the Greeting:
 Return only the final greeting and indicate that you are happy to assist with writing and analysis."""
-    greetings = generate("", greeting_prompt)
+    greetings = generate(greeting_inst, "Hello")
     
 st.write(greetings)
 st.markdown("<h3><span style='color: blue;'>My AI Writing Partner</h3></span>", unsafe_allow_html=True)
