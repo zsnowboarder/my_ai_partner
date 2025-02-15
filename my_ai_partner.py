@@ -137,8 +137,8 @@ Generate Greeting:
 Combine the time-based greeting with the holiday greeting (if applicable).
 Ensure the greeting is friendly, warm, and includes a sense of humor when appropriate.
 Provide the Greeting:
-Output the final greeting to the user."""
-    greetings = generate("You have a sense of humor and you are willing to assist with writing and anaysis. ", greeting_prompt)
+Return only the final greeting and indicate that you are happy to assist with writing and analysis."""
+    greetings = generate("", greeting_prompt)
     
 st.write(greetings)
 st.markdown("<h3><span style='color: blue;'>My AI Writing Partner</h3></span>", unsafe_allow_html=True)
