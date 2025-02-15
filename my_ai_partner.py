@@ -117,7 +117,7 @@ def wait(sec=35):
 
 #s session state variable
 if "first_run" not in st.session_state:
-    st.session_state = 1
+    st.session_state.first_run = 1
 
 st.write(st.session_state.first_run)
 st.session_state += 1
