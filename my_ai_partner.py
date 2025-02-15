@@ -197,7 +197,7 @@ col11, col12, col13, col14, col15 = st.columns([1,1,1,1,1])
 st.write("")
 st.write("Invest assist with free text search")
 
-col16, co17, col18, col19, col20 = st.columns([1,1,1,1,1])
+col16, col17, col18, col19, col20 = st.columns([1,1,1,1,1])
 
 result = None
 
