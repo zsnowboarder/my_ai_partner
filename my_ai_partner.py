@@ -74,6 +74,7 @@ generation_config = {
   "response_mime_type": "text/plain",
 }
 
+
 # FUNCTIONS
 
 ai_models_dict = {"Gemini 2.0 Flash (Max 1500 requests per day)": "gemini-2.0-flash",
@@ -113,9 +114,13 @@ def wait(sec=35):
    placeholdertime.empty()
    break
 # PROGRAM BEGIN
- 
-st.write(curr_date)
 
+#s session state variable
+if "first_run" not in st.session_state:
+    st.session_state = 1
+
+st.write(st.session_state.first_run)
+st.session_state += 1
 
 st.markdown("<h3><span style='color: blue;'>My AI Writing Partner</h3></span>", unsafe_allow_html=True)
 st.write('')
