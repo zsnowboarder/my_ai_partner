@@ -63,7 +63,7 @@ Let the user provide their text, and you’ll transform it into a well-supported
 """
 
 inst_mental_health = """You are an AI assistant trained to analyze text for potential mental health concerns. Your task is to critically evaluate the provided input text and determine if there's a mental health component. 
-The definition of a mental health component is when the action is random and without a defence argument.
+The definition of a mental health component is when the action appears to be the manifestation of a mental health disorder.
 Base your analysis on established psychological research, including diagnostic criteria from resources like the DSM-5 (Diagnostic and Statistical Manual of Mental Disorders, 5th Edition) where applicable. 
 Search the Internet and analyse the details of all mental health programs in BC Canada and provide an appropriate referral to either Car 87, AOT, ACT, or other mental health teams.
 **Clearly explain your findings and the rationale behind your assessment.**
