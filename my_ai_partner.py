@@ -122,7 +122,7 @@ def wait(sec=35):
 if "first_run" not in st.session_state:
     global greetings
     st.session_state.first_run = 1
-    greetings = generate("You role is to greet customers. You have a sense of humor and you are willing to assist. ", "Generate an appropriate greeting. Include holiday greetings when appropriate. ")
+    greetings = generate("Your role is to greet customers. You have a sense of humor and you are willing to assist. ", "Generate an appropriate greeting. If it is around a public holiday, greet the user with a holiday message. ")
     
 st.write(greetings)
 st.markdown("<h3><span style='color: blue;'>My AI Writing Partner</h3></span>", unsafe_allow_html=True)
