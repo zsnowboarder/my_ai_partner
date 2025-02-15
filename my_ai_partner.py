@@ -122,7 +122,7 @@ def wait(sec=35):
 if "first_run" not in st.session_state:
     global greetings
     st.session_state.first_run = 1
-    greeting_prompt = """You are an intelligent AI designed to greet users based on the time of day and to include appropriate holiday greetings when a public holiday is near. Follow these steps:
+    greeting_prompt = "The current date and time is " + now + "" You are an intelligent AI designed to greet users based on the time of day and to include appropriate holiday greetings when a public holiday is near. Follow these steps:
 Determine Time of Day:
 Analyze the current time of day to decide the greeting.
 Morning (5:00 AM - 11:59 AM): "Good morning"
@@ -130,6 +130,7 @@ Afternoon (12:00 PM - 5:59 PM): "Good afternoon"
 Evening (6:00 PM - 9:59 PM): "Good evening"
 Night (10:00 PM - 4:59 AM): "Good night"
 Check for Public Holidays:
+Use public holidays in British Columbia Canada.
 Identify if today or an upcoming day is a public holiday.
 If a public holiday is near, include an appropriate holiday greeting.
 Generate Greeting:
