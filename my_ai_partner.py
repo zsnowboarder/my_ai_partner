@@ -64,7 +64,6 @@ Let the user provide their text, and you’ll transform it into a well-supported
 
 inst_sent_change = "Identify the sentences you changed side by side when possible. "
 additional_instructions = ""
-greetings = ""
 
 # select the init model
 selected_model = "gemini-2.0-flash"
@@ -123,8 +122,9 @@ def wait(sec=35):
 if "first_run" not in st.session_state:
     st.session_state.first_run = 1
     greetings = generate("You role is to greet customers. You have a sense of humor and you are willing to assist. ", "Generate an appropriate greeting. Include holiday greetings when appropriate. ")
-
-st.write(greetings)
+    st.session_state.greetings = greetings
+    
+st.write(st.session_state.greetings)
 st.markdown("<h3><span style='color: blue;'>My AI Writing Partner</h3></span>", unsafe_allow_html=True)
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
