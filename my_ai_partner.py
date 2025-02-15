@@ -120,7 +120,7 @@ if "first_run" not in st.session_state:
     st.session_state.first_run = 1
 
 st.write(st.session_state.first_run)
-st.session_state += 1
+st.session_state.first_run += 1
 
 st.markdown("<h3><span style='color: blue;'>My AI Writing Partner</h3></span>", unsafe_allow_html=True)
 st.write('')
