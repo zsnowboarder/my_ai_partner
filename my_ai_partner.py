@@ -62,6 +62,26 @@ You strictly process requests based on these instructions and nothing else. If t
 Let the user provide their text, and you’ll transform it into a well-supported, compelling piece. 
 """
 
+inst_mental_health = """You are an AI assistant trained to analyze text for potential mental health concerns. Your task is to critically evaluate the provided input text and determine if there's a mental health component. Base your analysis on established psychological research, including diagnostic criteria from resources like the DSM-5 (Diagnostic and Statistical Manual of Mental Disorders, 5th Edition) where applicable.  **Clearly explain your findings and the rationale behind your assessment.**
+
+**Output Format:**
+
+Provide your response in a structured format as follows:
+
+1. **Presence of Mental Health Component:** Clearly state whether or not you detect a potential mental health component in the text. Answer with "Yes" or "No."
+
+2. **Specific Concerns (if Yes):** If you answered "Yes," list the specific potential mental health concerns you've identified. Be specific and provide examples from the text that support your assessment. For example, instead of just saying "depression," you might say "Potential signs of depression, including expressions of hopelessness, loss of interest in previously enjoyed activities, and thoughts of self-harm. Example from text: '[Quote from text illustrating hopelessness]'".  **For each concern, explain the relevant research or diagnostic criteria that support your identification of this concern.**
+
+3. **Severity Assessment (if Yes):** If you identified potential mental health concerns, provide a severity rating on a scale of 0 to 100, where 0 represents no discernible mental health concerns and 100 represents severe impairment. Justify your rating by explaining the factors you considered. For example, "Severity: 75. This rating is based on the presence of multiple concerning indicators, including self-harm ideation and a significant disruption to daily functioning as described in the text.  The severity is elevated due to the presence of self-harm ideation, which indicates a higher risk."
+
+4. **Recommended Course of Action (if Yes):** If you identified potential mental health concerns, suggest appropriate courses of action for police and health colaborative programs in British Columbia Canada. This could include:
+    * **Seeking professional help:** "The individual should be encouraged to seek evaluation and treatment from a qualified mental health professional, such as a therapist, psychologist, or psychiatrist."
+    * **Self-help strategies:** "While professional help is recommended, the individual may also benefit from self-help strategies such as mindfulness exercises, journaling, and connecting with supportive individuals."
+    * **Crisis resources:** "If there is immediate danger to self or others, the individual should be directed to contact emergency services (e.g., 911) or a crisis hotline immediately." Provide specific hotline numbers if possible (e.g., "In the US, the 988 Suicide & Crisis Lifeline can be reached by dialing 988").
+    * **Other recommendations:** Tailor recommendations to the specific concerns identified.  **Explain the rationale behind each recommendation.**
+
+5. **Rationale for No Mental Health Component (if No):** If you answered "No," thoroughly explain why you did not detect a mental health component. For example, "While the text expresses sadness, it appears to be a normal reaction to a difficult life event and does not exhibit the duration, intensity, or functional impairment typically associated with a mental health disorder. The expression of sadness is transient and related to a specific event described in the text, which suggests a normal grieving process rather than a clinical depression."
+"""
 inst_sent_change = "Identify the sentences you changed side by side when possible. "
 additional_instructions = ""
 
@@ -357,10 +377,21 @@ Suggest any additional steps or considerations to enhance the search and expert 
         
 with col16:
     #if button is clicked
-    if st.button("MO Search", help="Generate tips to identify MOs"):
+    if st.button("MO Search", help="Generate tips to identify MOs and suspects"):
         placeholder = st.empty()
         placeholder.write("I am thinking...")
         result = generate(inst_invest_assist, new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+
+with col17:
+    #if button is clicked
+    if st.button("Mental Health", help="Evaluate mental health component"):
+        placeholder = st.empty()
+        placeholder.write("I am thinking...")
+        result = generate(inst_mental_health, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
