@@ -462,8 +462,11 @@ with col18:
         #st.text_area("Response", result, height=800)
         wait(1)
 
+response_length = len(result)
 
-#st.text_area("Response", result, height=800)
+if response_length < 1000:
+    st.text_area("Response", result, height=response_length
+else st.text_area("Response", result, height=800)
 
-st.markdown(result)
+# st.markdown(result)
 
