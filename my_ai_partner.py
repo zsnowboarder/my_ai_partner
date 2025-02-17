@@ -17,6 +17,7 @@ curr_time = int(curr_time)
 api_key = st.secrets["gsc_connections"]["api_key"]
 genai.configure(api_key=api_key)
 
+result = ""
 # this is the main instruction
 
 instructions = """**Role & Objective**: 
