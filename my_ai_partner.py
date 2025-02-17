@@ -449,6 +449,20 @@ with col17:
         #st.text_area("Response", result, height=800)
         wait(1)
 
+with col18:
+    #if button is clicked
+    if st.button("eIM Naming", help="eIM assistant"):
+        with open("/mount/src/my_ai_partner/instructions.txt", "r") as file:
+            inst_eim = file.read()
+        placeholder = st.empty()
+        placeholder.write("Please wait...")
+        result = generate(inst_eim_, new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+
+
 #st.text_area("Response", result, height=800)
 
 st.markdown(result)
