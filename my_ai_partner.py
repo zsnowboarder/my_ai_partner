@@ -209,7 +209,6 @@ st.write("Invest assist")
 
 col16, col17, col18, col19, col20 = st.columns([1,1,1,1,1])
 
-result = None
 
 with col1:
     #if button is clicked
