@@ -189,31 +189,31 @@ new_data = st.text_area("""Enter your text, MO, or argument here.\n""",
                         height=200, value="AI has taken over many jobs. The future is not too bright.")
 
 st.write("")
-st.write("Transform the writing style")
+st.write("✍️ Text Makeover Magic")
 # create buttons in cols
 col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
 col1a, col2a, col3a, col4a, col5a = st.columns([1,1,1,1,1])
 
 st.write("")
-st.write("Spice up the writing")
+st.write("🌶️ Add Some Zing")
 
 col6, col7, col8, col9, col10 = st.columns([1,1,1,1,1])
 col6a, col7a, col8a, col9a, col10a = st.columns([1,1,1,1,1])
 
 st.write("")
-st.write("Analyse the text")
+st.write("🔍 Uncover the Secrets")
 
 col11, col12, col13, col14, col15 = st.columns([1,1,1,1,1])
 
 st.write("")
-st.write("Invest assist")
+st.write("🕵️ Detective Duties")
 
 col16, col17, col18, col19, col20 = st.columns([1,1,1,1,1])
 
 
 with col1:
     #if button is clicked
-    if st.button("General", help="Generate response."):
+    if st.button("General", help="Keep it Classic"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("You are a research assistant. " + sys_instructions, new_data)
@@ -223,7 +223,7 @@ with col1:
         wait(1)
 
 with col2:
-    if st.button("Academic", help="Generate response"):
+    if st.button("Academic", help="Channel Your Inner Professor"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("You are an academic researcher. " + sys_instructions, new_data)
@@ -233,7 +233,7 @@ with col2:
         wait(1)
         
 with col3:
-    if st.button("Easy language", help="Generate response"):
+    if st.button("Easy language", help="Make it Simple Smarty"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("You are a grade 10 student and you write in easy English. " +  sys_instructions, new_data)
@@ -243,7 +243,7 @@ with col3:
         wait(1)
 
 with col4:
-    if st.button("Persuasive", help="Generate response"):
+    if st.button("Persuasive", help="Convince Like a Lowyer"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("You are an experienced writer and you write in an extremely persuasive style. " + sys_instructions, new_data)
@@ -253,7 +253,7 @@ with col4:
         wait(1)
         
 with col5:
-    if st.button("Jimmy style :)", help="Generate response"):
+    if st.button("Jimmy style :)", help="Jimmy-fy it ;)"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("You are analytical with a sense of humor. Your arguments are the strongest and well structure. You write in APA format. Indicate that you are using Jimmy Style with a smiley." + sys_instructions, new_data)
@@ -264,7 +264,7 @@ with col5:
 
 with col1a:
     #if button is clicked
-    if st.button("Point Form", help="Summarize in point form."):
+    if st.button("Point Form", help="Bullet It Out"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Summarize the key ideas in point form.", new_data)
@@ -275,7 +275,7 @@ with col1a:
 
 with col2a:
     #if button is clicked
-    if st.button("Summarize", help="Summarize"):
+    if st.button("Summarize", help="Short and Sweet"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Summarize the writing in professional tone and identify the key takeaways.", new_data)
@@ -286,7 +286,7 @@ with col2a:
         
 with col6:
     #if button is clicked
-    if st.button("Professional", help="Generate response."):
+    if st.button("Professional", help="Go Pro!"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Improve the writing with a professional tone. Explain the result.", new_data)
@@ -297,7 +297,7 @@ with col6:
 
 with col7:
     #if button is clicked
-    if st.button("Funny", help="Generate response."):
+    if st.button("Funny", help="Crack a Joke"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Improve the writing with a sense of humor and keep it to a similar length. Explain the result.", new_data)
@@ -308,7 +308,7 @@ with col7:
         
 with col8:
     #if button is clicked
-    if st.button("Poetic", help="Generate response."):
+    if st.button("Poetic", help="Get Your Shakespeare On"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Improve the writing with a poetic tone. Explain the result.", new_data)
@@ -319,7 +319,7 @@ with col8:
 
 with col9:
     #if button is clicked
-    if st.button("Elegant", help="Generate response."):
+    if st.button("Elegant", help="Fancy It Up, Darling"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Improve the writing with an elegant tone, using sophisticated and clever words. Explain the result.", new_data)
@@ -330,7 +330,7 @@ with col9:
 
 with col10:
     #if button is clicked
-    if st.button("Coherent", help="Generate response."):
+    if st.button("Coherent", help="So Clear That You Cannot See"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Improve the sentences in a well structured and coherent tone. Keep it to a similar length and explain the result. " + inst_sent_change, new_data)
@@ -341,7 +341,7 @@ with col10:
 
 with col6a:
     #if button is clicked
-    if st.button("Engaging", help="Make it more engaging."):
+    if st.button("Engaging", help="Catch Their Attention!"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Improve the writing with a professional and engaging tone while keeping a similar length. Explain the result.", new_data)
@@ -352,7 +352,7 @@ with col6a:
 
 with col7a:
     #if button is clicked
-    if st.button("Critical", help="Make it slightly critical."):
+    if st.button("Critical", help="Speak Your Gut"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Improve the writing with a subtle critical tone and analytical. Explain the changes.", new_data)
@@ -363,7 +363,7 @@ with col7a:
 
 with col11:
     #if button is clicked
-    if st.button("Analyze Data", help="Generate response."):
+    if st.button("Analyze Data", help="Data Detective On Duty"):
         placeholder = st.empty()
         placeholder.write("Analyzing...")
         result = generate("1. Critically analyse the data. 2. Identify trends and patterns. 3. Draw accurate and meaningful insights from the data. 4. Synthesize the findings with research or reliable sources. 5. Provide suggestions for further improvement. 6. Summarize everything in one paragraph. Here is the data: ", new_data)
@@ -400,7 +400,7 @@ inst_analysis2 = """You are an intelligent AI designed to analyze and determine 
 """
 with col12:
     #if button is clicked
-    if st.button("Sentiment", help="Analyze sentiment and emotions"):
+    if st.button("Sentiment", help="Use Your Crytal Ball"):
         placeholder = st.empty()
         placeholder.write("Analyzing...")
         result = generate(inst_analysis2, new_data)
