@@ -190,11 +190,13 @@ st.write("")
 st.write("Transform the writing style")
 # create buttons in cols
 col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
+col1a, col2a, col3a, col4a, col5a = st.columns([1,1,1,1,1])
 
 st.write("")
 st.write("Spice up the writing")
 
 col6, col7, col8, col9, col10 = st.columns([1,1,1,1,1])
+col6a, col7a, col8a, col9a, col10a = st.columns([1,1,1,1,1])
 
 st.write("")
 st.write("Analyse the text")
@@ -259,7 +261,28 @@ with col5:
         #st.text_area("Response", result, height=800)
         wait(1)
 
+with col1a:
+    #if button is clicked
+    if st.button("Point Form", help="Summarize in point form."):
+        placeholder = st.empty()
+        placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
+        result = generate("Summarize the key ideas in point form.", new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
 
+with col2a:
+    #if button is clicked
+    if st.button("Summarize", help="Summarize"):
+        placeholder = st.empty()
+        placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
+        result = generate("Summarize the writing in professional tone.", new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+        
 with col6:
     #if button is clicked
     if st.button("Professional", help="Generate response."):
@@ -276,7 +299,7 @@ with col7:
     if st.button("Funny", help="Generate response."):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate("Improve the writing with a sense of humor. Explain the result.", new_data)
+        result = generate("Improve the writing with a sense of humor and keep it to a similar length. Explain the result.", new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
@@ -309,7 +332,7 @@ with col10:
     if st.button("Coherent", help="Generate response."):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate("Improve the sentences in a well structured and coherent tone. " + inst_sent_change, new_data)
+        result = generate("Improve the sentences in a well structured and coherent tone. Keep it to a similar length and explain the result. " + inst_sent_change, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
