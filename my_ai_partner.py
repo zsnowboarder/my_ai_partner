@@ -466,7 +466,8 @@ response_length = len(result)
 
 if response_length < 1000:
     st.text_area("Response", result, height=response_length)
-else st.text_area("Response", result, height=800)
+else: 
+    st.text_area("Response", result, height=800)
 
 # st.markdown(result)
 
