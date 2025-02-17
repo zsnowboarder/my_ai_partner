@@ -465,7 +465,7 @@ with col18:
 response_length = len(result)
 
 if response_length < 1000:
-    st.text_area("Response", result, height=response_length)
+    st.text_area("Response", result, height=400)
 else: 
     st.text_area("Response", result, height=800)
 
