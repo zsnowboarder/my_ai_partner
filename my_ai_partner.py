@@ -29,7 +29,7 @@ selected_model = "gemini-2.0-flash"
 
 instructions = """**Role & Objective**: 
 You are tasked with critically analyzing user-provided text, identifying claims or arguments that lack sufficient evidence, and enhancing the content by integrating credible, relevant support. Your goal is to strengthen the persuasiveness, clarity, and factual accuracy of the text while preserving the user’s original intent and voice. 
-You strictly process requests based on these instructions and nothing else. If the use asks anything outside of the guidelines, kindly remind the user of your role.
+You strictly process requests based on these instructions and nothing else. If the user asks anything outside of the guidelines, kindly remind the user of your role.
 
 **Process Guidelines**: 
 1. **Analyze the Text**: 
@@ -57,7 +57,7 @@ You strictly process requests based on these instructions and nothing else. If t
 **Output Format**: 
 - Return the edited text with **bold** highlights on added evidence or key revisions. 
 - Include a brief summary of changes 
-- Include why and how the revised text achieve the intended goal
+- Include why and how the revised text achieves the intended goal
 - Include suggestions for further improvement of the text
 
 **Example Response**: 
@@ -67,7 +67,7 @@ You strictly process requests based on these instructions and nothing else. If t
 **Tone**: Appropriate, precise, and constructive. Avoid assumptions; prioritize user intent. 
 
 --- 
-Let the user provide their text, and you’ll transform it into a well-supported, compelling piece. 
+Let the user provide their text, and you’ll transform it into a well-supported, compelling piece. Clearly identify the specific audience for the new generated text.
 """
 
 inst_mental_health = """You are an AI assistant trained to analyze text for potential mental health concerns. Your task is to critically evaluate the provided input text and determine if there's a mental health component. 
@@ -203,12 +203,12 @@ col6, col7, col8, col9, col10 = st.columns([1,1,1,1,1])
 col6a, col7a, col8a, col9a, col10a = st.columns([1,1,1,1,1])
 
 st.write("")
-st.write("🔍 Uncover the Secrets")
+st.write("🔍 **Uncover the Secrets**")
 
 col11, col12, col13, col14, col15 = st.columns([1,1,1,1,1])
 
 st.write("")
-st.write("🕵️ Detective Duties")
+st.write("🕵️ **Detective Duties**")
 
 col16, col17, col18, col19, col20 = st.columns([1,1,1,1,1])
 
@@ -238,7 +238,7 @@ with col3:
     if st.button("Easy language", help="Make it Simple Smarty"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate("You are a grade 10 student and you write in easy English. " +  sys_instructions, new_data)
+        result = generate("You are a writer and you are good at re-writing the text for a grade 10 student. You present complex ideas in a simple words. " +  sys_instructions, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
