@@ -280,7 +280,7 @@ with col2a:
     if st.button("Summarize", help="Short and Sweet"):
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
-        result = generate("Summarize the writing in professional tone and identify the key takeaways. If the text is too short with less than 5 sentences, response with a sense of humor and attempt to summarize the text.", new_data)
+        result = generate("Summarize the writing in professional tone and identify the key takeaways. Include some humor about summarizing a short text ONLY when the text has less than 6 sentences.", new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
