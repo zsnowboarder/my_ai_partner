@@ -203,6 +203,12 @@ sys_instructions = instructions
 st.write("")
 selected_option = st.selectbox("Select a model:", ai_models)
 selected_model = ai_models_dict[selected_option]
+
+if selected_model = "gemini-2.0-flash":
+    st.write("Zip through your tasks with lightning speed! While Flash can handle a whopping 1500 requests per day, it's like a caffeinated squirrel--energetic but not always the brightest in the bunch.")
+else:
+    st.write("The Einstein of the bunch! Although Pro prefers a more leisurely pace with just 50 requests per day, it's the genius who spends extra time sipping coffee and pondering the mysteries of the univers.")
+
 st.write("")
 #spaces = "&nbsp;&nbsp;&nbsp;"
 new_data = st.text_area("""Enter your text, MO, or argument here.\n""", 
