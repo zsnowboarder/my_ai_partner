@@ -34,7 +34,7 @@ Indicate briefly beside each generated naming convention when it should be used 
 If the text has more than 8 sentences, generate an additional summary at the end and indicate that it is a summary.
 Create each naming convention on a separate new line.
 If you have follow up questions, please add a line to separate the questions so that it is easy to read.
-Please format the response in Markdown and include line breaks using two spaces at the end of each line.
+Please format your response in Markdown and include line breaks using two spaces at the end of each line.
 Finally, if the text has enough details, classify it accurately to the following offence as a title of your response. It is possible sometimes there are multiple offences. Some offences also suggest that it has a mental health or hate crime component. Please indicate this in brackets. Do not classify if the text does not suggest a crime has taken place. Make the title uppercase and put it in the first line:
 Assault
 Assault with a weapon (Any thing except physical force is considered a weapon)
