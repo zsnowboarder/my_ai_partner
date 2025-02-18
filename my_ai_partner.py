@@ -492,7 +492,7 @@ with col18:
             inst_eim = file.read()
         placeholder = st.empty()
         placeholder.write("Please wait...")
-        result = generate("Please format your response in Markdown and include line breaks using two spaces at the end of each line. " + inst_eim, "The current date and time is " + now.strftime("%Y-%m-%d %H:%M:%S") + new_data)
+        result = generate("Please format your response in Markdown and include line breaks using two spaces at the end of each line." + inst_eim, "The current date and time is " + now.strftime("%Y-%m-%d %H:%M:%S") + new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
