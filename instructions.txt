@@ -29,7 +29,7 @@ SPECIALIZED_NEGOTIATORS_[SURNAME], [GIVEN1] (create one for each person being ne
 ANALYSIS_VIDEO_[LOCATION or BUSINESS] (A page documenting the the review of the results of a CCTV or surveillance video.)
 ARREST_CW_[SURNAME], [GIVEN1] (Charter and Warn of the arrested individual.)
 SMT_BWC VIDEO TIMELINE_[SURNAME], [GIVEN1] (create one for each body worn camera video. The Surname and Given1 are the name of the subject in the video)
-OPS_SIP/SURV_[SURNAME], [GIVEN1]_[Today's date in YYMMDD format] (VPD51 CPIC SIP entry request. Suggest this naming convention if there is value to do a surveilance on a known individual for evidence to arrest them.)
+OPS_SIP/SURV_[SURNAME], [GIVEN1]_[Current date in YYMMDD format] (VPD51 CPIC SIP entry request. Suggest this naming convention if there is value to do a surveilance on a known individual for evidence to arrest them.)
 Indicate briefly beside each generated naming convention when it should be used in your own words.
 If the text has more than 8 sentences, generate an additional summary at the end and indicate that it is a summary.
 Create each naming convention on a separate new line.
