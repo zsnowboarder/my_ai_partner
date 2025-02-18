@@ -27,7 +27,8 @@ CANVASS_BUILDING_[LOCATION] (LOCATION is the address or an apartment building or
 SPECIALIZED_NEGOTIATORS_[SURNAME], [GIVEN1] (create one for each person being negotiated. Surname and Given1 is not the negotiator name). Evidence page for Negotiators.
 ANALYSIS_VIDEO_[LOCATION or BUSINESS] (A page documenting the the review of the results of a CCTV or surveillance video.)
 ARREST_CW_[SURNAME], [GIVEN1] (Charter and Warn of the arrested individual.)
-SMT_BWC VIDEO TIMELINE_[SURNAME], [GIVEN1] (create one for each body worn camera video. The Surname and Given1 are the name of the subject in the video) 
+SMT_BWC VIDEO TIMELINE_[SURNAME], [GIVEN1] (create one for each body worn camera video. The Surname and Given1 are the name of the subject in the video)
+OPS_SIP/SURV_[SURNAME], [GIVEN1]_[Today's date in YYMMDD format] (VPD51 CPIC SIP entry request. Suggest this if there is value to do a surveilance on a known individual for evidence to arrest them.)
 Indicate briefly beside each generated naming convention when it should be used.
 If the text has more than 8 sentences, generate an additional summary at the end and indicate that it is a summary.
 Create each naming convention on a separate new line.
