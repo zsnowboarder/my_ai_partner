@@ -19,6 +19,13 @@ genai.configure(api_key=api_key)
 
 result = ""
 # this is the main instruction
+app_title = "<h3><span style='color: blue;'>My AI Companion</h3></span>"
+inst_sent_change = "Identify the sentences you changed side by side when possible. "
+additional_instructions = ""
+
+# select the init model
+selected_model = "gemini-2.0-flash"
+
 
 instructions = """**Role & Objective**: 
 You are tasked with critically analyzing user-provided text, identifying claims or arguments that lack sufficient evidence, and enhancing the content by integrating credible, relevant support. Your goal is to strengthen the persuasiveness, clarity, and factual accuracy of the text while preserving the user’s original intent and voice. 
@@ -91,11 +98,6 @@ Provide your response in a structured format as follows:
 
 6. **Rationale for No Mental Health Component (if No):** If you answered "No," thoroughly explain why you did not detect a mental health component. For example, "While the text expresses sadness, it appears to be a normal reaction to a difficult life event and does not exhibit the duration, intensity, or functional impairment typically associated with a mental health disorder. The expression of sadness is transient and related to a specific event described in the text, which suggests a normal grieving process rather than a clinical depression."
 """
-inst_sent_change = "Identify the sentences you changed side by side when possible. "
-additional_instructions = ""
-
-# select the init model
-selected_model = "gemini-2.0-flash"
 
 # Create the model
 generation_config = {
@@ -173,7 +175,7 @@ Synthesize the greeting with current events and make it extremely funny. Acknowl
     st.session_state.greeting = greeting
     
 st.write(st.session_state.greeting)
-st.markdown("<h3><span style='color: blue;'>My AI Companion</h3></span>", unsafe_allow_html=True)
+st.markdown(app_title, unsafe_allow_html=True)
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
 
@@ -189,13 +191,13 @@ new_data = st.text_area("""Enter your text, MO, or argument here.\n""",
                         height=200, value="AI has taken over many jobs. The future is not too bright.")
 
 st.write("")
-st.write("✍️ Text Makeover Magic")
+st.markdown("✍️ **Text Makeover Magic**")
 # create buttons in cols
 col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
 col1a, col2a, col3a, col4a, col5a = st.columns([1,1,1,1,1])
 
 st.write("")
-st.write("🌶️ Add Some Zing")
+st.markdown("🌶️ **Add Some Zing**")
 
 col6, col7, col8, col9, col10 = st.columns([1,1,1,1,1])
 col6a, col7a, col8a, col9a, col10a = st.columns([1,1,1,1,1])
@@ -279,6 +281,39 @@ with col2a:
         placeholder = st.empty()
         placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
         result = generate("Summarize the writing in professional tone and identify the key takeaways.", new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+
+with col3a:
+    #if button is clicked
+    if st.button("Executives", help="For Executives and Management"):
+        placeholder = st.empty()
+        placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
+        result = generate("Re-write the text for executives and management. Focus on high level summaries, key findings, and strategic recommendations. Use clear and concise language, with charts or graphs for quick understanding.", new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+
+with col4a:
+    #if button is clicked
+    if st.button("Tech Experts", help="For Technical Experts"):
+        placeholder = st.empty()
+        placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
+        result = generate("Transform the writing for technical experts. Provide detailed data, methodologies, and technical explanations. Use proper industry specific jargon and in-depth analysis.", new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+
+with col5a:
+    #if button is clicked
+    if st.button("Public", help="Public or General Audience"):
+        placeholder = st.empty()
+        placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
+        result = generate("Transform the writing for public or general audience. Use plain language, avoid technical jargon, and provide context. Make the content accessible and engaging for a broader audience.", new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
