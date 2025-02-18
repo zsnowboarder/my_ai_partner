@@ -505,12 +505,6 @@ response_length = len(result)
 #else: 
 #    st.text_area("Response", result, height=800)
 
-# st.markdown(result)
-
-# Use st.markdown to display the response with different heights
-if response_length < 1000:
-    st.markdown(f'<div style="height:400px; overflow-y:auto;">{result}</div>', unsafe_allow_html=True)
-else:
-    st.markdown(f'<div style="height:800px; overflow-y:auto;">{result}</div>', unsafe_allow_html=True)
+st.markdown(result, unsafe_allow_html=True)
 
 
