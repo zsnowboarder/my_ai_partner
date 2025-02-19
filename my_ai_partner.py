@@ -192,9 +192,8 @@ Synthesize the greeting with current events and make it extremely funny. Acknowl
     greeting = generate(greeting_inst, "Hello")
     st.session_state.greeting = greeting
     
-st.write(st.session_state.greeting)
 st.write(curr_date)
-st.write(curr_time)
+st.write(st.session_state.greeting)
 st.markdown(app_title, unsafe_allow_html=True)
 st.write('')
 st.write('**Responses are generated using the Google Gemini AI API. This is the free version of the service, which comes with limitations in features, performance, or access compared to the paid version**')
