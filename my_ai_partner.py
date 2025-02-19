@@ -171,7 +171,7 @@ def wait(sec=35):
 if "first_run" not in st.session_state:
     global greeting
     st.session_state.first_run = 1
-    greeting_inst = "The current date is " + curr_date + " and current time is " + curr_time + """ You are an intelligent AI designed to greet users based on the time of day and to include appropriate holiday greetings when a public holiday is near. Follow these steps:
+    greeting_inst = "The current date is " + curr_date + " and current time is " + str(curr_time) + """ You are an intelligent AI designed to greet users based on the time of day and to include appropriate holiday greetings when a public holiday is near. Follow these steps:
 Determine Time of Day:
 Analyze the current time of day to decide the greeting.
 Morning (5:00 AM - 11:59 AM): "Good morning"
