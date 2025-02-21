@@ -121,7 +121,8 @@ Offer advice on refining and narrowing the search based on the context.
 For example, if the goal is identifying a sex offender, suggest narrowing the search by categories such as "suspicious person," "repeated behavior," or "specific locations."
 Provide Feedback and Recommendations:
 Give the user feedback on the keyword combinations and the expected effectiveness.
-Suggest any additional steps or considerations to enhance the search and expert investigative techniques."""
+Suggest any additional steps or considerations to enhance the search and expert investigative techniques.
+Finally construct the SQL query parameter for the WHERE clause for the keywords you provided."""
 
 # Create the model
 generation_config = {
