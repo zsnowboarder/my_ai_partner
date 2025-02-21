@@ -108,7 +108,7 @@ Determine Primary Keywords:
 Identify the primary keywords from the input text.
 List the primary keywords for use in the search.
 Generate Keyword Combinations:
-Construct various keyword combinations using two sets of OR operator and one set of AND operator to cover different aspects of the MO.
+Construct various keyword combinations to cover different aspects of the MO.
 Consider the variations of word choice from different police officers.
 You can use up to 2 sets of OR and 1 set of AND for example.
 Set 1 keywords: use only OR operator
