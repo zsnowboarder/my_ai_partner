@@ -110,8 +110,11 @@ List the primary keywords for use in the search.
 Generate Keyword Combinations:
 Construct various keyword combinations using the AND/OR operators to cover different aspects of the MO.
 Consider the variations of word choice from different police officers.
-Limit the search to this pattern. You can use a simpler pattern but not more complex:
-(keyword1 OR keyword2 OR keyword3...) AND (keyword4 OR keyword5 OR ...) AND (keyword6 AND keyword7 AND keyword8...)
+You can use up to 2 sets of OR and 1 set of AND for example.
+Set 1: Keyword OR Keyword OR keyword
+Set 2: Keyword OR keyword OR keyword
+Set 3: keyword AND keyword AND keyword
+All 3 sets are combined with the AND operator for the search.
 Provide multiple combinations to improve search results.
 Suggest Optimal Search Strategy:
 Offer advice on refining and narrowing the search based on the context.
