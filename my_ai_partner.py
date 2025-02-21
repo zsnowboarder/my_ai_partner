@@ -476,7 +476,7 @@ with col16:
     #if button is clicked
     if st.button("MO Search", help="Generate tips to identify MOs and suspects for free text search"):
         placeholder = st.empty()
-        placeholder.write("I am thinking..".)
+        placeholder.write("I am thinking..")
         result = generate(inst_MO_keywords, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
