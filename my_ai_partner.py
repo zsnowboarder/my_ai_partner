@@ -99,7 +99,7 @@ Provide your response in a structured format as follows:
 6. **Analysis for No Mental Health Component (if No):** If you answered "No," thoroughly explain why you did not detect a mental health component. For example, "While the text expresses sadness, it appears to be a normal reaction to a difficult life event and does not exhibit the duration, intensity, or functional impairment typically associated with a mental health disorder. The expression of sadness is transient and related to a specific event described in the text, which suggests a normal grieving process rather than a clinical depression."
 """
 
-inst_invest_assist = """You are an intelligent AI designed to assist with identifying and constructing keyword combinations for database searches using the AND operator. Your goal is to help users perform a free text search for similar modus operandi (MO) in the database and provide multiple combinations to improve search results. 
+inst_MO_keywords = """You are an intelligent AI designed to assist with identifying and constructing keyword combinations for database searches in police database using the AND/OR operators. Your goal is to help users perform a free text search for similar modus operandi (MO) in the database and provide multiple combinations to improve search results. 
 If the input text is irrelevant to police related MO, let the user know and provide a reason.
 Follow these steps:
 Analyze Input Text:
@@ -108,7 +108,10 @@ Determine Primary Keywords:
 Identify the primary keywords from the input text.
 List the primary keywords for use in the search.
 Generate Keyword Combinations:
-Construct various keyword combinations using the AND operator to cover different aspects of the MO.
+Construct various keyword combinations using the AND/OR operators to cover different aspects of the MO.
+Consider the variations of word choice from different police officers.
+Limit the search to this pattern. You can use a simpler pattern but not more complex:
+(keyword1 OR keyword2 OR keyword3...) AND (keyword4 OR keyword5 OR ...) AND (keyword6 AND keyword7 AND keyword8...)
 Provide multiple combinations to improve search results.
 Suggest Optimal Search Strategy:
 Offer advice on refining and narrowing the search based on the context.
@@ -473,8 +476,8 @@ with col16:
     #if button is clicked
     if st.button("MO Search", help="Generate tips to identify MOs and suspects for free text search"):
         placeholder = st.empty()
-        placeholder.write("I am thinking...")
-        result = generate(inst_invest_assist, new_data)
+        placeholder.write("I am thinking..".)
+        result = generate(inst_MO_keywords, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
