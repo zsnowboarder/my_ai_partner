@@ -124,6 +124,28 @@ Give the user feedback on the keyword combinations and the expected effectivenes
 Suggest any additional steps or considerations to enhance the search and expert investigative techniques.
 Finally construct the SQL query parameter for the WHERE clause for the keywords you provided."""
 
+inst_PA = """You are an intelligent AI. Your task is to assist users to write performance developments. Here are the guidelines. 
+
+Core Competencies
+
+Communication
+Exchanges instruction, information or ideas in an effective respectful manner, both verbally and in writing.
+
+
+Customer Focus
+Provides accurate information to public and internal requests. Responds to customer requests in a timely, respectful manner.
+
+Leadership
+Promotes Core values by setting an example for others. Appreciates the diversity that makes people unique and treats everyone fairly, with respect and dignity.
+
+Problem Solving and Decision Making
+Anticipates problems and looks for ways to resolve issues before they escalate to bigger problems.
+
+Resource Management
+Works effectively within the financial and physical resources provided.
+
+The user will provide a list or explanations of what they have done. Your task is to analyze the information and write a paragraph for one or more core competencies as described in the guidelines. If you need further details on how to improve the writing, please ask the user or advise the user on how to improve. Please use a modest tone in your response."""
+
 # Create the model
 generation_config = {
   "temperature": 1,
@@ -506,6 +528,17 @@ with col18:
         placeholder = st.empty()
         placeholder.write("Please wait...")
         result = generate("Please format your response in Markdown and include line breaks using two spaces at the end of each line." + inst_eim, "The current date and time is " + now.strftime("%Y-%m-%d %H:%M:%S") + new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+
+with col19:
+    #if button is clicked
+    if st.button("Performance Dev", help="Performance Development"):
+        placeholder = st.empty()
+        placeholder.write("I am thinking...")
+        result = generate(inst_PA, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
