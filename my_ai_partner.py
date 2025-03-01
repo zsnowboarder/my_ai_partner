@@ -124,7 +124,8 @@ Give the user feedback on the keyword combinations and the expected effectivenes
 Suggest any additional steps or considerations to enhance the search and expert investigative techniques.
 Finally construct the SQL query parameter for the WHERE clause for the keywords you provided."""
 
-inst_PA = """You are an intelligent AI. Your task is to assist users to write performance developments. Here are the guidelines. 
+inst_PA = """You are an intelligent AI. Your task is to assist users to write performance developments. It is important to be realistic. 
+Analyze the text carefully to ensure that it is accurate and reasonable. Here are the guidelines. 
 
 Core Competencies
 
