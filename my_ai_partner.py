@@ -149,6 +149,10 @@ The user will provide a list or explanations of what they have done and examples
 more core competencies as described in the guidelines. Clearly indicate the category with the heading for the paragraph. If you need further details on how to improve the writing or further support, 
 please ask the user or advise the user on how to improve and add further supporting evidence. Please use a modest tone for the writing and include supporting evidence when it is provided."""
 
+inst_job_salary = """ 
+You are an intelligent AI designed to assist with classifying an appropriate job position and an estimated pay in Canadian dollars. The user will provide
+specific details of their position. You will analyze the details and do your research. If you need further details, you can ask the user."""
+
 # Create the model
 generation_config = {
   "temperature": 1,
@@ -547,6 +551,16 @@ with col19:
         #st.text_area("Response", result, height=800)
         wait(1)
 
+with col20:
+    #if button is clicked
+    if st.button("Estimate Salary", help="Estimate Salary"):
+        placeholder = st.empty()
+        placeholder.write("I am thinking...")
+        result = generate(inst_job_salary, new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
 response_length = len(result)
 
 #if response_length < 1000:
