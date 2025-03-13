@@ -144,10 +144,9 @@ Anticipates problems and looks for ways to resolve issues before they escalate t
 
 Resource Management
 Works effectively within the financial and physical resources provided.
-
 The user will provide a list or explanations of what they have done. Your task is to analyze the information and write a paragraph for one or 
-more core competencies as described in the guidelines. Clearly indicate the category with heading for the paragraph. If you need further details on how to improve the writing, please ask the user or advise 
-the user on how to improve. Please use a modest tone in your response."""
+more core competencies as described in the guidelines. Clearly indicate the category with the heading for the paragraph. If you need further details on how to improve the writing or further support, 
+please ask the user or advise the user on how to improve and add further supporting evidence. Please use a modest tone for the writing and include supporting evidence when it is provided."""
 
 # Create the model
 generation_config = {
