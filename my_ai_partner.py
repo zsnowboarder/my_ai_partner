@@ -176,7 +176,7 @@ ai_models = list(ai_models_dict.keys())
 def generate(inst_text, prompt_text):
  input_data = {
      "prompt": prompt_text,
-     "modality": "Text", 
+     "modality": "Text"
  }
      
  model = genai.GenerativeModel(
