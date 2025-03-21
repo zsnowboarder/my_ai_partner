@@ -174,13 +174,18 @@ ai_models_dict = {"Gemini 2.0 Flash (Max 1500 requests per day)": "gemini-2.0-fl
 ai_models = list(ai_models_dict.keys())
 
 def generate(inst_text, prompt_text):
+ input_data = {
+     "prompt": prompt_text,
+     "modality": "Text", 
+ }
+     
  model = genai.GenerativeModel(
   #model_name="gemini-1.5-pro",
   model_name=selected_model,
   generation_config=generation_config,
   system_instruction=inst_text)
   
- responses = model.generate_content(prompt_text, stream=True)
+ responses = model.generate_content(input_data, stream=True)
  resp_text = ""
   
  for response in responses:
