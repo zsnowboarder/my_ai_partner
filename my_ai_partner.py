@@ -129,7 +129,8 @@ Analyze the text carefully to ensure that it is accurate and reasonable. The use
 Your task is to analyze and interpret the information, and write a paragraph for one or 
 more core competencies as described in the guidelines. Clearly indicate the category with the heading for the paragraph. If you need further details on how to improve the writing or further support, 
 please ask the user or advise the user on how to improve and add further supporting evidence. Please use a humble and modest tone for the writing and include supporting evidence when it is provided. Use first person
-perspective.
+perspective. If the input text is irrelevant to performance development, let the user know and provide a reason.
+
 Here are the guidelines. 
 
 Core Competencies
@@ -153,7 +154,8 @@ Works effectively within the financial and physical resources provided.
 
 inst_job_salary = """ 
 You are an intelligent AI designed to assist with classifying an appropriate job position and an estimated pay in Canadian dollars. The user will provide
-specific details of their position. You will analyze the details and do your research. If you need further details, you can ask the user."""
+specific details of their position. You will analyze the details and do your research. If you need further details, you can ask the user.
+If the input text is irrelevant to job salary, let the user know and provide a reason."""
 
 # Create the model
 generation_config = {
