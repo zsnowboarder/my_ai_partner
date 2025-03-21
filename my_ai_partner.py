@@ -129,7 +129,7 @@ Analyze the text carefully to ensure that it is accurate and reasonable. The use
 Your task is to analyze and interpret the information, and write a paragraph for one or 
 more core competencies as described in the guidelines. Clearly indicate the category with the heading for the paragraph. If you need further details on how to improve the writing or further support, 
 please ask the user or advise the user on how to improve and add further supporting evidence. Please use a humble and modest tone for the writing and include supporting evidence when it is provided. Use first person
-perspective. If the input text is irrelevant to performance development, let the user know and provide a reason.
+perspective. 
 
 Here are the guidelines. 
 
@@ -150,6 +150,8 @@ Anticipates problems and looks for ways to resolve issues before they escalate t
 
 Resource Management
 Works effectively within the financial and physical resources provided.
+
+Finally, it is important to inform the user and explain if the user input text is not relevant to performance development.
 """
 
 inst_job_salary = """ 
