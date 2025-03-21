@@ -128,7 +128,7 @@ inst_PA = """You are an intelligent AI. Your task is to assist users in writing 
 Analyze the text carefully to ensure that it is accurate and reasonable. The user will provide a list or explanations of what they have done and examples or facts from email communications.
 Your task is to analyze and interpret the information, and write a paragraph for one or 
 more core competencies as described in the guidelines. Clearly indicate the category with the heading for the paragraph. If you need further details on how to improve the writing or further support, 
-please ask the user or advise the user on how to improve and add further supporting evidence. Please use a modest tone for the writing and include supporting evidence when it is provided. Use first person
+please ask the user or advise the user on how to improve and add further supporting evidence. Please use a humble and modest tone for the writing and include supporting evidence when it is provided. Use first person
 perspective.
 Here are the guidelines. 
 
@@ -459,6 +459,17 @@ with col7a:
         #st.text_area("Response", result, height=800)
         wait(1)
 
+with col8a:
+    #if button is clicked
+    if st.button("Humble", help="Being humble"):
+        placeholder = st.empty()
+        placeholder.write("Please be patient as it may take me a minute or two to generate a response with this free version........")
+        result = generate("Revise the writing with a humble and modest tone. Explain the changes.", new_data)
+        placeholder.empty()
+        #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+        #st.text_area("Response", result, height=800)
+        wait(1)
+
 with col11:
     #if button is clicked
     if st.button("Analyze Data", help="Data Detective On Duty"):
@@ -555,7 +566,7 @@ with col19:
 
 with col20:
     #if button is clicked
-    if st.button("Estimate Salary", help="Estimate Salary"):
+    if st.button("Estimate Salary", help="Estimate salary based on job profile"):
         placeholder = st.empty()
         placeholder.write("I am thinking...")
         result = generate(inst_job_salary, new_data)
