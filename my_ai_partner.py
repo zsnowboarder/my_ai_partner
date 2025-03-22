@@ -161,22 +161,34 @@ A performance goal is a short-term goal that focuses on achieving tangible resul
 The following example is a performance goal. The information contained can be adopted and edited as needed. The general format ensures that all the components of the S.M.A.R.T goal methodology are used. 
  
 Performance Goal: Enhance Work-Life Balance and Mental Health
+
 Summary: Incorporate regular physical breaks and sufficient time off to improve mental well-being and work-life balance.
+
 Specific: Improve work-life balance and prioritize mental well-being.
+
 Measurable:
 Dedicate a quick walk down the stairs every two hours.
 Take a minimum of three weeks vacation within the calendar year.
+
 Achievable: These are practical steps that can be integrated into your daily and weekly routine with conscious effort.
+
 Importance: Maintaining a healthy work-life balance reduces stress, prevents burnout, and supports sustained productivity, benefiting both personal well-being and organizational success.
+
 ​​​​​DEVELOPMENT GOAL EXAMPLES:
 A development goal is a long-term goal that impacts one's career trajectory and focuses on building personal traits, knowledge, abilities, and attitudes over a longer period of time. Although its benefit to the organization may not be as immediately apparent, a development goal is a precursor to an individual making greater organizational contributions.
 The following is an example of a development goal. The information contained can be adopted and edited as needed. The general format ensures that all the components of the S.M.A.R.T goal methodology are used.
+
 Development Goal: Enhance Expertise through Continuous Learning and Industry Engagement
+
 Summary: Expand knowledge and professional value by completing relevant certifications and attending industry events.
+
 Specific: Complete three courses or certifications in areas directly relevant to your career aspirations (e.g., Advanced Machine Learning, NLP Specialization, Cloud Computing for AI, Data Science Leadership). Attend at least two industry events (conferences, workshops, webinars) focused on ML, NLP, AI, data science, or innovation.
+
 Measurable:
 Provide proof of completion (certificates, transcripts) for the three courses or certifications.
+
 Achievable: Attainable with a focused plan to balance professional responsibilities and learning opportunities.
+
 Importance: Investing in skill development keeps you at the forefront of industry advancements, driving personal growth and increasing your value to the organization.
 Finally, please use exactly the same structure as shown in the examples.
 """
