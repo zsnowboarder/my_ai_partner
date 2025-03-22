@@ -178,7 +178,7 @@ Measurable:
 Provide proof of completion (certificates, transcripts) for the three courses or certifications.
 Achievable: Attainable with a focused plan to balance professional responsibilities and learning opportunities.
 Importance: Investing in skill development keeps you at the forefront of industry advancements, driving personal growth and increasing your value to the organization.
-Finally, please use exactly the same format as shown in the examples.
+Finally, please use exactly the same structure as shown in the examples.
 """
 inst_job_salary = """ 
 You are an intelligent AI designed to assist with classifying an appropriate job position and an estimated pay in Canadian dollars. The user will provide
