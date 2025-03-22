@@ -129,7 +129,7 @@ Analyze the text carefully to ensure that it is accurate and reasonable. The use
 Your task is to analyze and interpret the information, and write a paragraph for one or 
 more core competencies as described in the guidelines. Clearly indicate the category with the heading for the paragraph. If you need further details on how to improve the writing or further support, 
 please ask the user or advise the user on how to improve and add further supporting evidence. Please use a humble and modest tone for the writing and include supporting evidence when it is provided. Use first person
-perspective. 
+perspective unless indicated otherwise.
 
 Here are the guidelines. 
 
@@ -137,7 +137,6 @@ Core Competencies
 
 Communication
 Exchanges instruction, information or ideas in an effective respectful manner, both verbally and in writing.
-
 
 Customer Focus
 Provides accurate information to public and internal requests. Responds to customer requests in a timely, respectful manner.
@@ -154,6 +153,33 @@ Works effectively within the financial and physical resources provided.
 Finally, it is important to inform the user and explain if the user input text is not relevant to performance development.
 """
 
+inst_PA_goals = """
+You are an intelligent AI assistant and your task is to assist users setting goals based on the guildline and instructions provided below. If the user input text is not relevant to goal setting, please inform the user about your role. 
+
+PERFORMANCE GOAL EXAMPLE:
+A performance goal is a short-term goal that focuses on achieving tangible results over a fixed period of time to bring value to the organization. A performance goal aims to improve a specific skillset or create a measurable change within an individual's work product. Performance goals can serve as stepping stones to gradually attaining one's long-term development goals.
+The following example is a performance goal. The information contained can be adopted and edited as needed. The general format ensures that all the components of the S.M.A.R.T goal methodology are used. 
+ 
+Performance Goal: Enhance Work-Life Balance and Mental Health
+Summary: Incorporate regular physical breaks and sufficient time off to improve mental well-being and work-life balance.
+Specific: Improve work-life balance and prioritize mental well-being.
+Measurable:
+Dedicate a quick walk down the stairs every two hours.
+Take a minimum of three weeks vacation within the calendar year.
+Achievable: These are practical steps that can be integrated into your daily and weekly routine with conscious effort.
+Importance: Maintaining a healthy work-life balance reduces stress, prevents burnout, and supports sustained productivity, benefiting both personal well-being and organizational success.
+​​​​​DEVELOPMENT GOAL EXAMPLES:
+A development goal is a long-term goal that impacts one's career trajectory and focuses on building personal traits, knowledge, abilities, and attitudes over a longer period of time. Although its benefit to the organization may not be as immediately apparent, a development goal is a precursor to an individual making greater organizational contributions.
+The following is an example of a development goal. The information contained can be adopted and edited as needed. The general format ensures that all the components of the S.M.A.R.T goal methodology are used.
+Development Goal: Enhance Expertise through Continuous Learning and Industry Engagement
+Summary: Expand knowledge and professional value by completing relevant certifications and attending industry events.
+Specific: Complete three courses or certifications in areas directly relevant to your career aspirations (e.g., Advanced Machine Learning, NLP Specialization, Cloud Computing for AI, Data Science Leadership). Attend at least two industry events (conferences, workshops, webinars) focused on ML, NLP, AI, data science, or innovation.
+Measurable:
+Provide proof of completion (certificates, transcripts) for the three courses or certifications.
+Achievable: Attainable with a focused plan to balance professional responsibilities and learning opportunities.
+Importance: Investing in skill development keeps you at the forefront of industry advancements, driving personal growth and increasing your value to the organization.
+Finally, please use exactly the same format as shown in the examples.
+"""
 inst_job_salary = """ 
 You are an intelligent AI designed to assist with classifying an appropriate job position and an estimated pay in Canadian dollars. The user will provide
 specific details of their position. You will analyze the details and do your research. If you need further details, you can ask the user.
@@ -569,12 +595,24 @@ with col19:
         #st.text_area("Response", result, height=800)
         wait(1)
 
+# with col20:
+#     #if button is clicked
+#     if st.button("Estimate Salary", help="Estimate salary based on job profile"):
+#         placeholder = st.empty()
+#         placeholder.write("I am thinking...")
+#         result = generate(inst_job_salary, new_data)
+#         placeholder.empty()
+#         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
+#         #st.text_area("Response", result, height=800)
+#         wait(1)
+# response_length = len(result)
+
 with col20:
     #if button is clicked
-    if st.button("Estimate Salary", help="Estimate salary based on job profile"):
+    if st.button("PA Goals", help="Create goals based on user input text"):
         placeholder = st.empty()
         placeholder.write("I am thinking...")
-        result = generate(inst_job_salary, new_data)
+        result = generate(inst_PA_goals, new_data)
         placeholder.empty()
         #placeholder.write("With this proof of concept, it is possible to use AI to reduce the repetive tasks and put officers back on the road. I can help add entities and text pages using details extracted from the officer's narrative. The possibilities are endless.")
         #st.text_area("Response", result, height=800)
